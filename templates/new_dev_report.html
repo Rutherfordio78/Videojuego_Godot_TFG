@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}Angel Request - Submit Feedback{% endblock %}
+
+{% block content %}
+<section class="form-container">
+    <div class="form-card">
+        <h1>Submit Feedback</h1>
+        <p class="form-subtitle">Help us improve the game by reporting bugs or suggesting features</p>
+        
+        <form action="{{ url_for('new_dev_report') }}" method="POST" class="content-form">
+            <div class="form-group">
+                <label for="report_type">Report Type</label>
+                <select id="report_type" name="report_type" required>
+                    <option value="bug">Bug Report</option>
+                    <option value="suggestion">Feature Suggestion</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="content">Description</label>
+                <textarea id="content" name="content" rows="10" required></textarea>
+            </div>
+            
+            <div class="form-actions">
+                <a href="{{ url_for('dev_reports') }}" class="btn btn-secondary">Cancel</a>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+</section>
+{% endblock %}

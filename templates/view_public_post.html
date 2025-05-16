@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}{{ post.title }} - Angel Request{% endblock %}
+
+{% block content %}
+<section class="post-container">
+    <div class="post-header-full">
+        <h1>{{ post.title }}</h1>
+        <div class="post-meta">
+            <span class="post-author">By {{ post.author.username }}</span>
+            <span class="post-date">{{ post.date_posted.strftime('%B %d, %Y at %H:%M') }}</span>
+        </div>
+    </div>
+    
+    <div class="post-content-full">
+        <p>{{ post.content }}</p>
+    </div>
+    
+    <div class="post-actions">
+        <a href="{{ url_for('social') }}" class="btn btn-secondary">Back to Feed</a>
+    </div>
+    
+    <div class="comments-section">
+        <h2>Comments ({{ post.comments|length }})</h2>
+        
+        {% if 'user_id' in session %}
+            <form action="{{ url_for('add_comment', post_id=post.id) }}" method="POST" class="comment-form">
+                <div class="form-group">
+                    <label for="content">Add a comment</label>
+                    <textarea id="content" name="content" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        {% else %}
+            <div class="login-prompt">
+                <p>Please <a href="{{ url_for('login') }}">login</a> to leave a comment.</p>
+            </div>
+        {% endif %}
+        
+        <div class="comments-list">
+            {% if post.comments %}
+                {% for comment in post.comments|sort(attribute='date_posted', reverse=true) %}
+                    <div class="comment-card">
+                        <div class="comment-header">
+                            <span class="comment-author">{{ comment.user.username }}</span>
+                            <span class="comment-date">{{ comment.date_posted.strftime('%B %d, %Y at %H:%M') }}</span>
+                        </div>
+                        <div class="comment-content">
+                            <p>{{ comment.content }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="no-comments">
+                    <p>No comments yet. Be the first to share your thoughts!</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+
+{% block title %}Angel Request - Developer Feedback{% endblock %}
+
+{% block content %}
+<section class="social-header">
+    <h1>Developer Feedback</h1>
+    <p class="subtitle">Help us improve the game by reporting bugs and suggesting features</p>
+</section>
+
+<section class="social-nav">
+    <div class="container">
+        <div class="social-tabs">
+            <a href="{{ url_for('social') }}" class="tab">Public Feed</a>
+            <a href="{{ url_for('dev_reports') }}" class="tab active">Developer Feedback</a>
+        </div>
+        
+        <div class="auth-status">
+            {% if 'user_id' in session %}
+                <span>Logged in as <strong>{{ session['username'] }}</strong></span>
+                <a href="{{ url_for('logout') }}" class="btn btn-small">Logout</a>
+            {% else %}
+                <a href="{{ url_for('login') }}" class="btn btn-small">Login</a>
+                <a href="{{ url_for('register') }}" class="btn btn-small btn-secondary">Register</a>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<section class="dev-content">
+    <div class="container">
+        <div class="content-header">
+            <h2>Feedback Reports</h2>
+            {% if 'user_id' in session %}
+                <a href="{{ url_for('new_dev_report') }}" class="btn btn-primary">Submit New Report</a>
+            {% else %}
+                <a href="{{ url_for('login') }}" class="btn btn-primary">Login to Submit</a>
+            {% endif %}
+        </div>
+        
+        <div class="reports-tabs">
+            <button class="tab-btn active" data-tab="bugs">Bug Reports</button>
+            <button class="tab-btn" data-tab="suggestions">Suggestions</button>
+        </div>
+        
+        <div class="reports-container">
+            <div class="tab-content active" id="bugs-content">
+                <h3>Bug Reports</h3>
+                {% if bug_reports %}
+                    {% for report in bug_reports %}
+                        <div class="report-card">
+                            <div class="report-status {{ report.status }}">{{ report.status }}</div>
+                            <div class="report-header">
+                                <h4 class="report-title">{{ report.title }}</h4>
+                                <div class="report-meta">
+                                    <span class="report-author">By {{ report.author.username }}</span>
+                                    <span class="report-date">{{ report.date_posted.strftime('%B %d, %Y') }}</span>
+                                </div>
+                            </div>
+                            <div class="report-content">
+                                <p>{{ report.content }}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <div class="no-reports">
+                        <p>No bug reports yet. Help us improve by reporting any issues you find!</p>
+                    </div>
+                {% endif %}
+            </div>
+            
+            <div class="tab-content" id="suggestions-content">
+                <h3>Feature Suggestions</h3>
+                {% if suggestions %}
+                    {% for suggestion in suggestions %}
+                        <div class="report-card">
+                            <div class="report-status {{ suggestion.status }}">{{ suggestion.status }}</div>
+                            <div class="report-header">
+                                <h4 class="report-title">{{ suggestion.title }}</h4>
+                                <div class="report-meta">
+                                    <span class="report-author">By {{ suggestion.author.username }}</span>
+                                    <span class="report-date">{{ suggestion.date_posted.strftime('%B %d, %Y') }}</span>
+                                </div>
+                            </div>
+                            <div class="report-content">
+                                <p>{{ suggestion.content }}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <div class="no-reports">
+                        <p>No suggestions yet. Share your ideas to help make the game better!</p>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons and contents
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                // Show corresponding content
+                const tabId = button.getAttribute('data-tab');
+                document.getElementById(`${tabId}-content`).classList.add('active');
+            });
+        });
+    });
+</script>
+{% endblock %}

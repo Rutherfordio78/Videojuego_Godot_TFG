@@ -1,0 +1,420 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="game-info-header">
+    <h1>About Angel Request</h1>
+    <p class="subtitle">Discover what makes our game special</p>
+</section>
+
+<section class="game-overview">
+    <div class="game-overview-grid">
+        <!-- Columna izquierda: Logo y detalles -->
+        <div class="game-info-left">
+            <div class="logo-container">
+                <img src="{{ url_for('static', filename='images/Logo_Juego.png') }}" alt="Angel Request Logo" class="game-logo-game-info">
+            </div>
+            
+            <div class="game-details">
+                <div class="detail-card">
+                    <h3>Genre</h3>
+                    <p>Roguelike, 2D Plataform, RPG</p>
+                </div>
+                <div class="detail-card">
+                    <h3>Platforms</h3>
+                    <p>PC - Steam</p>
+                </div>
+                <div class="detail-card">
+                    <h3>Release Date</h3>
+                    <p>Coming Soon</p>
+                </div>
+                <div class="detail-card">
+                    <h3>ESRB Rating</h3>
+                    <p>T (Teen)</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Columna derecha: Descripción y lore -->
+        <div class="game-info-right">
+            <div class="game-description">
+                <h2>Game Overview</h2>
+                <p>Angel Request is a 2D Roguelike platformer with RPG overtones, focusing on core roguelike mechanics, such as playing multiple runs to learn enemy and map patterns, and improving your character with each run to become increasingly stronger.</p>
+                <br>
+                <p>With a unique blend of action, strategy, and exploration, Angel Request offers a gameplay experience that we hope will be fun and keep you entertained for hours.</p>        
+            </div>
+
+            <div class="game-lore">
+                <h2>Game Lore</h2>
+                <p>In the story, you play the role of a person who has just died in their world. As a soul on their way to heaven, they are stopped by an angel who prevents them from advancing to heaven unless they fulfill his request, which is to defeat the evil demon king of an alternate dimension. To do so, the angel will offer the player several bodies of brave warriors from the new world who were unable to complete the request.</p>
+                <br>
+                <p>Will you be able to fulfill the angel's request?</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="game-features">
+    <h2 style="text-align: center;">Key Features</h2>
+    <ul class="feature-list">
+        <li>
+            <h3>Dynamic Combat System</h3>
+            <p>Adapt to the environment and your character to achieve victory in battle.</p>
+        </li>
+        <li>
+            <h3>Character Selection</h3>
+            <p>Choose the character you like best for your adventure</p>
+        </li>
+        <li>
+            <h3>Immersive World</h3>
+            <p>Explore various levels of different themes to find riches.</p>
+        </li>
+        <li>
+            <h3>An exciting story</h3>
+            <p>Live the story alongside your character and discover the mysteries that await you.</p>
+        </li>
+        <li>
+            <h3>Tell us</h3>
+            <p>Don't live the adventure alone, go to <a href="{{ url_for('social') }}">Social</a> and tell everyone.</p>
+        </li>
+    </ul>
+</section>
+
+<section class="screenshots">
+    <h2 style="text-align: center;">Screenshots</h2>
+    <div class="screenshot-carousel">
+        <div class="carousel-container">
+            <div class="carousel-track">
+                <div class="carousel-slide" data-index="0">
+                    <img src="{{ url_for('static', filename='images/screenshots/Imagen_ZonaSegura.png') }}" alt="Zona Segura">
+                </div>
+                <div class="carousel-slide" data-index="1">
+                    <img src="{{ url_for('static', filename='images/screenshots/Imagen_NivelPantano.png') }}" alt="Nivel Pantano">
+                </div>
+                <div class="carousel-slide" data-index="2">
+                    <img src="{{ url_for('static', filename='images/screenshots/Imagen_NivelCuevas.png') }}" alt="Nivel Cuevas">
+                </div>
+                <div class="carousel-slide" data-index="3">
+                    <img src="{{ url_for('static', filename='images/screenshots/Imagen_SelectorDePersonajes.png') }}" alt="Menu Selector de personajes">
+                </div>
+                <div class="carousel-slide" data-index="4">
+                    <img src="{{ url_for('static', filename='images/screenshots/Imagen_MenuMuerte.png') }}" alt="Menu Pantalla de Muerte">
+                </div>
+            </div>
+            
+            <button class="carousel-arrow prev-arrow">
+                <div class="arrow-left"></div>
+            </button>
+            <button class="carousel-arrow next-arrow">
+                <div class="arrow-right"></div>
+            </button>
+        </div>
+        
+        <div class="carousel-indicators">
+            <span class="indicator active" data-index="0"></span>
+            <span class="indicator" data-index="1"></span>
+            <span class="indicator" data-index="2"></span>
+            <span class="indicator" data-index="3"></span>
+            <span class="indicator" data-index="4"></span>
+        </div>
+        
+        <div class="screenshot-caption">
+            <h3 id="screenshot-title">Improve your character</h3>
+            <p id="screenshot-description">Purchase upgrades in the Safe Zone and prepare for adventure.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Nueva sección de videos -->
+<section class="game-videos">
+    <h2 style="text-align: center;">Game Trailers & Gameplay</h2>
+    <div class="video-carousel-container">
+        <div class="video-carousel">
+            <div class="video-item active">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/placeholder1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <h3>Official Trailer</h3>
+            </div>
+            <div class="video-item">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/placeholder2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <h3>Gameplay Showcase</h3>
+            </div>
+            <div class="video-item">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/placeholder3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <h3>Developer Commentary</h3>
+            </div>
+        </div>
+        <div class="carousel-controls">
+            <button class="carousel-control prev">&lt;</button>
+            <div class="carousel-indicators">
+                <span class="indicator active" data-index="0"></span>
+                <span class="indicator" data-index="1"></span>
+                <span class="indicator" data-index="2"></span>
+            </div>
+            <button class="carousel-control next">&gt;</button>
+        </div>
+    </div>
+</section>
+
+<!-- Nueva sección de música -->
+<section class="game-soundtrack">
+    <h2 style="text-align: center;">Game Soundtrack</h2>
+    <p class="soundtrack-intro">Listen to the epic soundtrack that accompanies your adventure.</p>
+    
+    <div class="music-player">
+        <div class="track-list-container">
+            <div class="track-list" id="track-list">
+                <div class="track-item active" data-src="{{ url_for('static', filename='audio/Musica_ZonaSegura.mp3') }}" data-page="1">
+                    <div class="track-info">
+                        <span class="track-number">01</span>
+                        <div class="track-details">
+                            <h3 class="track-title">Safe Zone Theme</h3>
+                            <p class="track-composer">Composed by Kero</p>
+                        </div>
+                        <span class="track-duration">3:59</span>
+                    </div>
+                    <div class="track-controls">
+                        <button class="play-btn">Play</button>
+                    </div>
+                </div>
+                
+                <div class="track-item" data-src="{{ url_for('static', filename='audio/Musica_ZonaSegura_2.mp3') }}" data-page="1">
+                    <div class="track-info">
+                        <span class="track-number">02</span>
+                        <div class="track-details">
+                            <h3 class="track-title">Safe Zone Theme 2</h3>
+                            <p class="track-composer">Composed by Kero</p>
+                        </div>
+                        <span class="track-duration">3:28</span>
+                    </div>
+                    <div class="track-controls">
+                        <button class="play-btn">Play</button>
+                    </div>
+                </div>
+                
+                <div class="track-item" data-src="{{ url_for('static', filename='audio/Musica_NivelPantano.mp3') }}" data-page="1">
+                    <div class="track-info">
+                        <span class="track-number">03</span>
+                        <div class="track-details">
+                            <h3 class="track-title">Swamp Theme</h3>
+                            <p class="track-composer">Composed by Jaime Gutierrez</p>
+                        </div>
+                        <span class="track-duration">3:56</span>
+                    </div>
+                    <div class="track-controls">
+                        <button class="play-btn">Play</button>
+                    </div>
+                </div>
+                
+                <div class="track-item" data-src="{{ url_for('static', filename='audio/Musica_BossFight.mp3') }}" data-page="2">
+                    <div class="track-info">
+                        <span class="track-number">04</span>
+                        <div class="track-details">
+                            <h3 class="track-title">Boss Battle Theme</h3>
+                            <p class="track-composer">Composed by Kero</p>
+                        </div>
+                        <span class="track-duration">1:26</span>
+                    </div>
+                    <div class="track-controls">
+                        <button class="play-btn">Play</button>
+                    </div>
+                </div>
+
+                <div class="track-item" data-src="{{ url_for('static', filename='audio/Musica_NivelCuevas.mp3') }}" data-page="2">
+                    <div class="track-info">
+                        <span class="track-number">05</span>
+                        <div class="track-details">
+                            <h3 class="track-title">Cave Theme</h3>
+                            <p class="track-composer">Composed by Kero</p>
+                        </div>
+                        <span class="track-duration">3:00</span>
+                    </div>
+                    <div class="track-controls">
+                        <button class="play-btn">Play</button>
+                    </div>
+                </div>
+
+                <div class="track-item" data-src="{{ url_for('static', filename='audio/Musica_MenuMuerte.mp3') }}" data-page="2">
+                    <div class="track-info">
+                        <span class="track-number">06</span>
+                        <div class="track-details">
+                            <h3 class="track-title">Death Menu Theme</h3>
+                            <p class="track-composer">Composed by Kero</p>
+                        </div>
+                        <span class="track-duration">1:44</span>
+                    </div>
+                    <div class="track-controls">
+                        <button class="play-btn">Play</button>
+                    </div>
+                </div>
+
+                <div class="track-item" data-src="{{ url_for('static', filename='audio/Musica_NivelCastillo.mp3') }}" data-page="3">
+                    <div class="track-info">
+                        <span class="track-number">07</span>
+                        <div class="track-details">
+                            <h3 class="track-title">Castle Theme</h3>
+                            <p class="track-composer">Composed by Kero</p>
+                        </div>
+                        <span class="track-duration">2:21</span>
+                    </div>
+                    <div class="track-controls">
+                        <button class="play-btn">Play</button>
+                    </div>
+                </div>
+
+                <div class="track-item" data-src="{{ url_for('static', filename='audio/Musica_Festival.mp3') }}" data-page="3">
+                    <div class="track-info">
+                        <span class="track-number">08</span>
+                        <div class="track-details">
+                            <h3 class="track-title">Festival Theme</h3>
+                            <p class="track-composer">Composed by Kero</p>
+                        </div>
+                        <span class="track-duration">1:10</span>
+                    </div>
+                    <div class="track-controls">
+                        <button class="play-btn">Play</button>
+                    </div>
+                </div>
+
+                <div class="track-item" data-src="{{ url_for('static', filename='audio/Musica_Espectral.mp3') }}" data-page="3">
+                    <div class="track-info">
+                        <span class="track-number">09</span>
+                        <div class="track-details">
+                            <h3 class="track-title">Spirit Theme</h3>
+                            <p class="track-composer">Composed by Kero</p>
+                        </div>
+                        <span class="track-duration">0:48</span>
+                    </div>
+                    <div class="track-controls">
+                        <button class="play-btn">Play</button>
+                    </div>
+                </div>
+
+                <div class="track-item" data-src="{{ url_for('static', filename='audio/Musica_NivelCementerio_2.mp3') }}" data-page="4">
+                    <div class="track-info">
+                        <span class="track-number">10</span>
+                        <div class="track-details">
+                            <h3 class="track-title">Grave Theme 2</h3>
+                            <p class="track-composer">Composed by Kero</p>
+                        </div>
+                        <span class="track-duration">3:02</span>
+                    </div>
+                    <div class="track-controls">
+                        <button class="play-btn">Play</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="track-pagination">
+                <button id="prev-page" class="page-btn">&laquo; Previous Page</button>
+                <div class="page-indicators">
+                    <span class="page-indicator active" data-page="1">1</span>
+                    <span class="page-indicator" data-page="2">2</span>
+                    <span class="page-indicator" data-page="3">3</span>
+                    <span class="page-indicator" data-page="4">4</span>
+                </div>
+                <button id="next-page" class="page-btn">Next Page &raquo;</button>
+            </div>
+        </div>
+        
+        <div class="player-controls">
+            <audio id="audio-player" controls></audio>
+            <div class="player-buttons">
+                <button id="prev-track">Previous Song</button>
+                <button id="next-track">Next Song</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="system-requirements">
+    <h2 style="text-align: center;">System Requirements</h2>
+    <div class="requirements-container">
+        <div class="requirements-column">
+            <h3>Minimum Requirements</h3>
+            <ul>
+                <li><strong>OS:</strong> Windows 10 64-bit</li>
+                <li><strong>Processor:</strong> Intel Core i5-6600K / AMD Ryzen 3 1300X</li>
+                <li><strong>Memory:</strong> 8 GB RAM</li>
+                <li><strong>Graphics:</strong> NVIDIA GTX 1050 / AMD RX 560</li>
+                <li><strong>Storage:</strong> 1 GB available space</li>
+            </ul>
+        </div>
+        <div class="requirements-column">
+            <h3>Recommended Requirements</h3>
+            <ul>
+                <li><strong>OS:</strong> Windows 10/11 64-bit</li>
+                <li><strong>Processor:</strong> Intel Core i7-8700K / AMD Ryzen 5 3600X</li>
+                <li><strong>Memory:</strong> 16 GB RAM</li>
+                <li><strong>Graphics:</strong> NVIDIA RTX 2060 / AMD RX 5700</li>
+                <li><strong>Storage:</strong> 1 GB SSD</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<section class="faq">
+    <h2>Frequently Asked Questions</h2>
+    
+    <div class="faq-container">
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>When is the exact release date?</h3>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>While we haven't announced an exact release date yet, Angel Request is scheduled to launch in Q3 2026. Subscribe to our newsletter or check out the devlog to be the first to know when we announce the official date!</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Will there be a beta test?</h3>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Yes! We're planning a closed beta test, followed by an open beta closer to release. Subscribers to our newsletter will have priority access to the closed beta.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Is there a multiplayer mode?</h3>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Angel Request is intended as a single-player experience, however we plan to implement multiplayer in the future.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Will there be post-launch content?</h3>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Absolutely! We have plans for both free updates and premium DLC expansions that will add new areas, quests, items, and gameplay features. There are also ideas to implement a season pass that includes access to all major DLC for the first year.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>What languages will be supported?</h3>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>At launch, Angel Request will support English and Spanish with text localization for all supported languages.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/game-info.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block title %}Angel Request - Social Hub{% endblock %}
+
+{% block content %}
+<section class="social-header">
+    <h1>Community Hub</h1>
+    <p class="subtitle">Connect with other players and share your thoughts</p>
+</section>
+
+<section class="social-nav">
+    <div class="container">
+        <div class="social-tabs">
+            <a href="{{ url_for('social') }}" class="tab active">Public Feed</a>
+            <a href="{{ url_for('dev_reports') }}" class="tab">Developer Feedback</a>
+        </div>
+        
+        <div class="auth-status">
+            {% if 'user_id' in session %}
+                <span>Logged in as <strong>{{ session['username'] }}</strong></span>
+                <a href="{{ url_for('logout') }}" class="btn btn-small">Logout</a>
+            {% else %}
+                <a href="{{ url_for('login') }}" class="btn btn-small">Login</a>
+                <a href="{{ url_for('register') }}" class="btn btn-small btn-secondary">Register</a>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<section class="social-content">
+    <div class="container">
+        <div class="content-header">
+            <h2>Public Feed</h2>
+            {% if 'user_id' in session %}
+                <a href="{{ url_for('new_public_post') }}" class="btn btn-primary">Create New Post</a>
+            {% else %}
+                <a href="{{ url_for('login') }}" class="btn btn-primary">Login to Post</a>
+            {% endif %}
+        </div>
+        
+        <div class="posts-container">
+            {% if public_posts %}
+                {% for post in public_posts %}
+                    <div class="post-card">
+                        <div class="post-header">
+                            <h3 class="post-title">{{ post.title }}</h3>
+                            <div class="post-meta">
+                                <span class="post-author">By {{ post.author.username }}</span>
+                                <span class="post-date">{{ post.date_posted.strftime('%B %d, %Y') }}</span>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <p>{{ post.content[:200] }}{% if post.content|length > 200 %}...{% endif %}</p>
+                        </div>
+                        <div class="post-footer">
+                            <a href="{{ url_for('view_public_post', post_id=post.id) }}" class="btn btn-small">Read More</a>
+                            <span class="comment-count">{{ post.comments|length }} Comments</span>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="no-posts">
+                    <p>No posts yet. Be the first to share your thoughts!</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,10 @@
+[
+  {
+    "type": "sqlite",
+    "path": "c:\\Users\\Jaime\\Desktop\\Cosas_Genericas_Trae\\x_PaginaWebJuego\\instance\\game_site.db"
+  },
+  {
+    "type": "sqlite",
+    "path": "c:\\Users\\Jaime\\Desktop\\Cosas_Genericas_Trae\\x_PaginaWebJuego\\instance\\subscribers.db"
+  }
+]

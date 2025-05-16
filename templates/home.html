@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero hero-background">
+    <div class="hero-content">
+        <div class="game-logo-container">
+            <img src="{{ url_for('static', filename='images/Logo_Juego.png') }}" alt="Angel Request Logo" class="game-logo">
+        </div>
+        <h1>Angel Request</h1>
+        <p class="tagline">Embark on a journey like never before</p>
+        <div class="cta-buttons">
+            <a href="{{ url_for('game_info') }}" class="btn btn-primary">Learn More</a>
+            <a href="{{ url_for('subscribe') }}" class="btn btn-secondary">Stay Updated</a>
+        </div>
+    </div>
+</section>
+
+<section class="features">
+    <h2>Game Features</h2>
+    <div class="feature-grid">
+        <div class="feature-card">
+            <div class="feature-icon">🌍</div>
+            <h3>Explore the World</h3>
+            <p>Travel through levels of various themes, treasures and adventures await you.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">⚔️</div>
+            <h3>Epic Battles</h3>
+            <p>Engage in thrilling combat with unique enemies and challenging bosses.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🧙</div>
+            <h3>Great Story</h3>
+            <p>Immerse yourself in a rich narrative that will keep you intrigued.</p>
+        </div>
+    </div>
+</section>
+
+<section class="trailer">
+    <h2>Watch the Trailer</h2>
+    <div class="video-container">
+        <div class="video-placeholder">
+            <p>Trailer Coming Soon</p>
+        </div>
+    </div>
+</section>
+
+<section class="newsletter">
+    <h2>Stay in the Loop</h2>
+    <p>Subscribe to our newsletter for exclusive updates and early access opportunities.</p>
+    <a href="{{ url_for('subscribe') }}" class="btn btn-primary">Subscribe Now</a>
+</section>
+{% endblock %}

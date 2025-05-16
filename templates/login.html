@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Angel Request - Login{% endblock %}
+
+{% block content %}
+<section class="auth-container">
+    <div class="auth-card">
+        <h1>Login</h1>
+        <p class="auth-subtitle">Sign in to your account to join the community</p>
+        
+        <form action="{{ url_for('login') }}" method="POST" class="auth-form">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-block">Login</button>
+        </form>
+        
+        <div class="auth-links">
+            <p>Don't have an account? <a href="{{ url_for('register') }}">Register here</a></p>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,281 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="dev-header">
+    <h1>Development log</h1>
+    <p class="subtitle">Behind the scenes of Angel Request</p>
+</section>
+
+<section class="dev-blog">
+    <div class="blog-controls">
+        <div class="filter-container">
+            <label for="sort-posts">Sort posts:</label>
+            <select id="sort-posts" class="sort-select">
+                <option value="newest">Newest First</option>
+                <option value="oldest">Oldest First</option>
+            </select>
+        </div>
+    </div>
+    
+    <div class="blog-posts-container">
+        
+        <article class="blog-post" data-date="2025-02-22">
+            <h2>First steps</h2>
+            <div class="post-meta">
+                <span class="post-date">Febrary 22, 2025</span>
+                <span class="post-author">by Jaime Gutierrez</span>
+            </div>
+            <div class="post-content">
+                <p>
+                    The first thing we focused on was what kind of game we wanted to make.
+                    Being a new studio, the first game is very important, as it's the starting point for this great world of video game development.
+                </p>
+                <br>
+                <p>There were many ideas but we had to choose something that we knew we could do well, or at least that was the idea, and from there Angel Request was born, although it didn't start out called that.</p>
+                
+                <div class="image-container">
+                    <img src="{{ url_for('static', filename='images/Logo_Juego.png') }}" alt="Angel Request Logo" class="dev-logo-image">
+                    <p class="image-caption">Angel Request logo</p>
+                </div>
+                
+                <p>At first, everything was ideas, but obviously we couldn't cover everything we could think of, especially since there was only one person developing everything.</p>
+                <br>
+                <p>But as they say, all journeys begin with a first step, and with that in mind I started building Angel Request.</p>
+            </div>
+        </article>
+
+        <article class="blog-post" data-date="2025-02-30">
+            <h2>The Protagonist</h2>
+            <div class="post-meta">
+                <span class="post-date">Febrary 30, 2025</span>
+                <span class="post-author">by Jaime Gutierrez</span>
+            </div>
+            <div class="post-content">
+                <p>Every story needs a protagonist, so this was the first thing I started programming.</p>
+                <br>
+                <p>Playing has to be fun, so the protagonist had to be comfortable to handle and respond well to the controls.</p>
+                <br>
+                <p>This was not an easy task, especially with the first character, I still didn't know very well what I wanted the character to do, doing too much meant the risk of making many mistakes since I still had little knowledge, but doing too little would make the character boring.</p>
+                
+                <div class="image-container">
+                    <img src="{{ url_for('static', filename='images/screenshots/Imagen_CrearGuerrero.png') }}" alt="Character Creation Process" class="dev-character-image">
+                    <p class="image-caption">Early character development process</p>
+                </div>
+                <br>
+                <p>As soon as I made the first character I was relieved, I thought it hadn't turned out badly at all, but that thought didn't last long. As soon as I started making more characters and little by little I learned more things, I realized how badly I made the first one, rookie mistakes I suppose.</p>
+            </div>
+        </article>
+
+        <article class="blog-post" data-date="2025-03-03">
+            <h2>The Enemies</h2>
+            <div class="post-meta">
+                <span class="post-date">March 3, 2025</span>
+                <span class="post-author">by Jaime Gutierrez</span>
+            </div>
+            <div class="post-content">
+                <p>Every hero needs a villain, so it is not surprising that the next thing in my to do list after the protagonists was the enemies.</p>
+                <br>
+                <p>The enemies had to go with the theme of the area, and since the first area is a swamp, I had to make swamp enemies.</p>
+                <br>
+                
+                <div class="image-container">
+                    <img src="{{ url_for('static', filename='images/screenshots/Imagen_CrearRana.png') }}" alt="Frog Creation Process" class="dev-frog-image">
+                    <p class="image-caption">Enemy development process</p>
+                </div>
+                
+                <p>The first enemies that came to mind were mushrooms, frogs and insects, there are more options but I had to make at least a few to have something to try, there will be more later.</p>
+            </div>
+        </article>
+
+        <article class="blog-post" data-date="2025-03-10">
+            <h2>The Making of the World</h2>
+            <div class="post-meta">
+                <span class="post-date">March 10, 2025</span>
+                <span class="post-author">by Jaime Gutierrez</span>
+            </div>
+            <div class="post-content">
+                <p>I said before that creating the characters was difficult, well I take it back, creating the maps, that is difficult.</p>
+                <br>
+                <p>Now when I think about all the games I've played and all those well-made levels and worlds come to mind, all I can think is that those people must have been geniuses.</p>
+                <br>
+                <p>I thought I had a great imagination, until I had to think and design the game levels, and I noticed how I had the creativity of a stone.</p>
+                
+                <div class="image-container">
+                    <img src="{{ url_for('static', filename='images/screenshots/Imagen_CrearZonaSegura.png') }}" alt="Safe Zone Creation Process" class="dev-safe-zone-image">
+                    <p class="image-caption">Safe Zone development process</p>
+                </div>
+                
+                <p>Luckily it was temporary, once I got going things started working out on their own, I had to take references and even then it was difficult, but it wasn't as bad as it seemed at first.</p>
+            </div>
+        </article>
+
+        <article class="blog-post" data-date="2025-03-15">
+            <h2>Big Changes</h2>
+            <div class="post-meta">
+                <span class="post-date">March 15, 2025</span>
+                <span class="post-author">by Jaime Gutierrez</span>
+            </div>
+            <div class="post-content">
+                <p>The game was born as a metroidvania in the first instance, of course since there was nothing done at that time, it was easy to say</p>
+                
+                <p>Once I started programming, the ideas I was putting down were very little like a Metroidvania, that was the first big change, in which the game became a Roguelike, which was in my opinion a change for the better.</p>
+                
+                <p>A Roguelike could be "simpler" to climb, and it is a very popular game genre so I continued with this new idea.</p>
+                
+                <p></p>
+            </div>
+        </article>
+
+        <article class="blog-post" data-date="2025-03-29">
+            <h2>I'll bring you up to date</h2>
+            <div class="post-meta">
+                <span class="post-date">March 29, 2025</span>
+                <span class="post-author">by Jaime Gutierrez</span>
+            </div>
+            <div class="post-content">
+                <p>It's been a while since my last post, I've been busy with the game, but that's good for you.</p>
+                <br>
+                <p>I've made quite a bit of progress, so I'm going to show you a little bit of what I've been working on. I hope you like it.</p>
+                
+                <div class="image-container">
+                    <img src="{{ url_for('static', filename='images/screenshots/Imagen_ResumenCreaciones.png') }}" alt="Creation Process" class="dev-creation-process-image">
+                    <p class="image-caption">Creation Process</p>
+                </div>
+                <br>
+                <p>
+                    This image is a summary of everything I've been working on.
+                    Let's see if you can figure out everything it hides.
+                </p>
+
+            </div>
+        </article>
+
+    </div>
+    
+    <div class="pagination-container">
+        <div class="pagination">
+            <button class="pagination-btn" id="prev-page" disabled>&laquo; Previous</button>
+            <div class="page-numbers">
+                <span class="page-number active" data-page="1">1</span>
+                <span class="page-number" data-page="2">2</span>
+            </div>
+            <button class="pagination-btn" id="next-page">Next &raquo;</button>
+        </div>
+        <div class="posts-per-page">
+            <label for="posts-per-page">Posts per page:</label>
+            <select id="posts-per-page-select">
+                <option value="2">2</option>
+                <option value="3" selected>3</option>
+                <option value="5">5</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+    </div>
+</section>
+
+<section class="roadmap">
+    <h2 style="text-align: center;">Development Roadmap</h2>
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="timeline-marker completed"></div>
+            <div class="timeline-content">
+                <h3>Concept Phase</h3>
+                <p>World building, story development, and core gameplay mechanics defined.</p>
+                <span class="timeline-date">Completed</span>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-marker completed"></div>
+            <div class="timeline-content">
+                <h3>Pre-Production</h3>
+                <p>Art style established, prototype development, and technical requirements finalized.</p>
+                <span class="timeline-date">Completed</span>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-marker current"></div>
+            <div class="timeline-content">
+                <h3>Production</h3>
+                <p>Full-scale development of game assets, levels, and systems.</p>
+                <span class="timeline-date">In Progress</span>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+                <h3>Alpha Testing</h3>
+                <p>Internal testing of core gameplay loops and systems.</p>
+                <span class="timeline-date">Q3 2025</span>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+                <h3>Beta Testing</h3>
+                <p>Limited external testing with focus on balance and performance.</p>
+                <span class="timeline-date">Q1 2026</span>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+                <h3>Release</h3>
+                <p>Official game launch across all platforms.</p>
+                <span class="timeline-date">Q3 2026</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="team">
+    <h2 style="text-align: center;">Meet the Team</h2>
+    <div class="team-grid">
+        <div class="team-member">
+            <div class="member-photo">
+                <img src="{{ url_for('static', filename='images/Avatar_Del_Desarrollador.jpg') }}" alt="Game Director" class="team-avatar">
+            </div>
+            <h3>Game Director</h3>
+            <h5>Jaime Gutierrez</h5>
+            <p>Leading the vision and creative direction of Epic Adventure.</p>
+        </div>
+        <div class="team-member">
+            <div class="member-photo">
+                <img src="{{ url_for('static', filename='images/Avatar_Del_Desarrollador.jpg') }}" alt="Lead Programmer" class="team-avatar">
+            </div>
+            <h3>Lead Programmer</h3>
+            <h5>Jaime Gutierrez</h5>
+            <p>Overseeing the technical implementation and performance optimization.</p>
+        </div>
+        <div class="team-member">
+            <div class="member-photo">
+                <img src="{{ url_for('static', filename='images/Avatar_Del_Desarrollador.jpg') }}" alt="Art Director" class="team-avatar">
+            </div>
+            <h3>Art Director</h3>
+            <h5>Jaime Gutierrez</h5>
+            <p>Crafting the visual identity and ensuring artistic consistency.</p>
+        </div>
+        <div class="team-member">
+            <div class="member-photo">
+                <img src="{{ url_for('static', filename='images/Avatar_Del_Desarrollador.jpg') }}" alt="Narrative Designer" class="team-avatar">
+            </div>
+            <h3>Narrative Designer</h3>
+            <h5>Jaime Gutierrez</h5>
+            <p>Weaving the story and creating compelling character arcs.</p>
+        </div>
+    </div>
+</section>
+
+<section class="join-community">
+    <h2 style="text-align: center;">Join Our Community</h2>
+    <p style="text-align: center;">Connect with other fans and stay updated on the latest development news.</p>
+    <div class="social-links">
+        <a href="#" class="social-link">Discord</a>
+        <a href="#" class="social-link">Twitter</a>
+        <a href="#" class="social-link">Reddit</a>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/devlog.js') }}"></script>
+{% endblock %}
