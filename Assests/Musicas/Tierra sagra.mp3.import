@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://u8u808qhn6cy"
+path="res://.godot/imported/Tierra sagra.mp3-e774a09ede6eed869e8189832bc05d4a.mp3str"
+
+[deps]
+
+source_file="res://Assests/Musicas/Tierra sagra.mp3"
+dest_files=["res://.godot/imported/Tierra sagra.mp3-e774a09ede6eed869e8189832bc05d4a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,162 @@
+[gd_scene load_steps=34 format=3 uid="uid://c01wruuisln4"]
+
+[ext_resource type="PackedScene" uid="uid://48lghtilvyhe" path="res://Cosas_Enemigos/Caos_Maker/caos_maker.tscn" id="1_kj47d"]
+[ext_resource type="PackedScene" uid="uid://dj5obv4txwqod" path="res://Cosas_Escenario/Fondos_Paralax/fondo_paralax_bosque_1.tscn" id="1_qoa3y"]
+[ext_resource type="PackedScene" uid="uid://dp7us10umy60e" path="res://Cosas_Escenario/Fondos_Paralax/fondo_paralax_bosque_2.tscn" id="2_cmcsg"]
+[ext_resource type="PackedScene" uid="uid://bo00yvomv18s6" path="res://Cosas_Enemigos/Sunny Seta/sunny_seta.tscn" id="3_n457r"]
+[ext_resource type="PackedScene" uid="uid://dphsuv7oa3piw" path="res://Cosas_Enemigos/Rana_Pantanosa/rana_pantanosa.tscn" id="4_2iufn"]
+[ext_resource type="PackedScene" uid="uid://r45hekm5dtw2" path="res://Cosas_Escenario/Fondos_Paralax/fondo_paralax_cuevas.tscn" id="4_75bl1"]
+[ext_resource type="PackedScene" uid="uid://1qtqldkw44qr" path="res://Cosas_Objetos/Llave/Llave.tscn" id="5_ec6we"]
+[ext_resource type="PackedScene" uid="uid://yfthmgtk6kgp" path="res://Cosas_Escenario/Fondos_Paralax/fondo_cementerio_paralax_1.tscn" id="5_mun60"]
+[ext_resource type="PackedScene" uid="uid://c5441qs6rbd5m" path="res://Cosas_Objetos/Moneda_Oro/Gold_Coin.tscn" id="6_egts1"]
+[ext_resource type="PackedScene" uid="uid://cl2pltu7t2guu" path="res://Cosas_Objetos/Pocion_Vida/pocion_vida.tscn" id="7_gmxbr"]
+[ext_resource type="PackedScene" uid="uid://cvjlhw0lujx1o" path="res://Cosas_Objetos/Moneda_Plata/Silver_Coin.tscn" id="8_rajc2"]
+[ext_resource type="PackedScene" uid="uid://24rja5e1tjil" path="res://Cosas_Objetos/Cofre/cofre.tscn" id="9_cwaxx"]
+[ext_resource type="PackedScene" uid="uid://xu8glukamymf" path="res://Cosas_Objetos/Diamante_Azul/diamante_azul.tscn" id="10_cgm2s"]
+[ext_resource type="PackedScene" uid="uid://bs0wgw5tco2mm" path="res://Cosas_Objetos/Diamante_Rojo/diamante_rojo.tscn" id="11_r8ulm"]
+[ext_resource type="PackedScene" uid="uid://dlbu1t68evf2t" path="res://Cosas_Enemigos/Trampa_Torreta/cabeza_torreta_Derecha.tscn" id="12_7gyh6"]
+[ext_resource type="PackedScene" uid="uid://cul4kmteen433" path="res://Cosas_Objetos/Tienda_De_Mejoras/tienda_de_mejoras.tscn" id="12_x8304"]
+[ext_resource type="PackedScene" uid="uid://k7yijvnsatkt" path="res://Cosas_Enemigos/Trampa_Torreta/torso_torreta_izquierda.tscn" id="14_voty0"]
+[ext_resource type="PackedScene" uid="uid://bnei8q2uvlvjh" path="res://Cosas_Escenario/Fondos_Paralax/fondo_paralax_cielo_1.tscn" id="15_b5ano"]
+[ext_resource type="PackedScene" uid="uid://y0pthlm8i3li" path="res://Cosas_Enemigos/Trampa_Torreta/torso_torreta_derecha.tscn" id="15_xkupq"]
+[ext_resource type="PackedScene" uid="uid://fynvlu5fsn6b" path="res://Cosas_Enemigos/Bicho_Volador/bicho_volador.tscn" id="16_br6bd"]
+[ext_resource type="PackedScene" uid="uid://dy0qd64dolmyx" path="res://Cosas_Escenario/Caerse_Del_Mapa/Caerse_Del_Mapa.tscn" id="16_h4rri"]
+[ext_resource type="PackedScene" uid="uid://b1ax78f2ho748" path="res://Cosas_Enemigos/Golem_Azul/golem_azul.tscn" id="17_68vvk"]
+[ext_resource type="PackedScene" uid="uid://gnw50x8g6ews" path="res://Cosas_Objetos/TocaDiscos/toca_discos.tscn" id="17_gh1fk"]
+[ext_resource type="PackedScene" uid="uid://cqdhd74cgpgws" path="res://Cosas_Objetos/Training_Dummy/training_dummy.tscn" id="18_0wygc"]
+[ext_resource type="PackedScene" uid="uid://c2ep0xscct3e" path="res://Cosas_Enemigos/Golem_Naranja/golem_naranja.tscn" id="18_aqsfn"]
+[ext_resource type="PackedScene" uid="uid://srny3s62qfwb" path="res://Cosas_Enemigos/Gusano_Trampa/gusano_tampa.tscn" id="19_ji02b"]
+[ext_resource type="PackedScene" uid="uid://bsro0nhalxwd8" path="res://Cosas_Enemigos/Trampa_Torreta/cabeza_torreta_Izquierda.tscn" id="19_qe6e1"]
+[ext_resource type="PackedScene" uid="uid://ck1kubax5dcwa" path="res://Cosas_Enemigos/Murcielago/murcielago.tscn" id="20_y8y2p"]
+[ext_resource type="PackedScene" uid="uid://c455r35l4kl28" path="res://Cosas_Enemigos/Green-Skeleton/green_skeleton.tscn" id="22_ym57c"]
+[ext_resource type="PackedScene" uid="uid://cjrfj6rpb2wa8" path="res://Cosas_Enemigos/Fantasma_Griton/fantasma_griton.tscn" id="23_1lgid"]
+[ext_resource type="PackedScene" uid="uid://bhnx3d5qh26ch" path="res://Cosas_Personajes/Guerrera/player_guerrera.tscn" id="31_6k2hp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tttjq"]
+size = Vector2(2296.5, 106)
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_jblei"]
+vertices = PackedVector2Array(150, 342, 150, 501.117, 74, 494.789, 74, 74, 182, 74, 182, 266, 298, 342, 394, 266, 394, 74, 566, 74, 566, 366, 430, 366, 298, 502, 430, 502)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(0, 3, 4, 5), PackedInt32Array(6, 0, 5, 7), PackedInt32Array(7, 8, 9, 10, 11), PackedInt32Array(12, 6, 7, 11, 13)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(64, 504, 64, 320, 64, 64, 192, 64, 192, 256, 384, 256, 384, 64, 576, 64, 576, 376, 440, 376, 440, 512, 288, 512, 288, 352, 160, 352, 160, 496, 160, 512)])
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1147.75, 592)
+shape = SubResource("RectangleShape2D_tttjq")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1152, -120)
+shape = SubResource("RectangleShape2D_tttjq")
+
+[node name="Decorado" type="Node2D" parent="."]
+
+[node name="Fondo_Paralax_Bosque_2" parent="Decorado" instance=ExtResource("2_cmcsg")]
+position = Vector2(576, 1216)
+
+[node name="Fondo_Paralax_Bosque_1" parent="Decorado" instance=ExtResource("1_qoa3y")]
+position = Vector2(568, 2016)
+
+[node name="Fondo_Paralax_Cielo_1" parent="Decorado" instance=ExtResource("15_b5ano")]
+position = Vector2(568, 2688)
+
+[node name="Fondo_Paralax_Cuevas" parent="Decorado" instance=ExtResource("4_75bl1")]
+position = Vector2(248, 3752)
+
+[node name="Fondo_cementerio_paralax_1" parent="Decorado" instance=ExtResource("5_mun60")]
+position = Vector2(-152, 5680)
+
+[node name="Otros" type="Node2D" parent="."]
+
+[node name="Muerte_Por_Caida" parent="Otros" instance=ExtResource("16_h4rri")]
+position = Vector2(600, 1384)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="Otros"]
+position = Vector2(400, -904)
+navigation_polygon = SubResource("NavigationPolygon_jblei")
+
+[node name="Interactuables" type="Node2D" parent="."]
+
+[node name="Training_Dummy" parent="Interactuables" instance=ExtResource("18_0wygc")]
+position = Vector2(1696, 528)
+
+[node name="TocaDiscos" parent="Interactuables" instance=ExtResource("17_gh1fk")]
+position = Vector2(1912, 504)
+
+[node name="Tienda_De_Mejoras" parent="Interactuables" instance=ExtResource("12_x8304")]
+position = Vector2(2224, 472)
+
+[node name="Cofre" parent="Interactuables" instance=ExtResource("9_cwaxx")]
+position = Vector2(1328, 280)
+
+[node name="Enemigos" type="Node2D" parent="."]
+
+[node name="Rana_Pantanosa" parent="Enemigos" instance=ExtResource("4_2iufn")]
+position = Vector2(624, -200)
+
+[node name="Sunny_Seta" parent="Enemigos" instance=ExtResource("3_n457r")]
+position = Vector2(600, 520)
+
+[node name="Caos_Maker" parent="Enemigos" instance=ExtResource("1_kj47d")]
+position = Vector2(192, -224)
+
+[node name="Cabeza_Torreta_Derecha" parent="Enemigos" instance=ExtResource("12_7gyh6")]
+position = Vector2(1392, -256)
+
+[node name="Cabeza_Torreta_Izquierda" parent="Enemigos" instance=ExtResource("19_qe6e1")]
+position = Vector2(1328, -256)
+
+[node name="Torso_Torreta_Izquierda" parent="Enemigos" instance=ExtResource("14_voty0")]
+position = Vector2(1328, -216)
+
+[node name="Torso_Torreta_Derecha" parent="Enemigos" instance=ExtResource("15_xkupq")]
+position = Vector2(1392, -216)
+
+[node name="Bicho_Volador" parent="Enemigos" instance=ExtResource("16_br6bd")]
+position = Vector2(896, -656)
+
+[node name="Golem_Azul" parent="Enemigos" instance=ExtResource("17_68vvk")]
+position = Vector2(1656, -240)
+
+[node name="Golem_Naranja" parent="Enemigos" instance=ExtResource("18_aqsfn")]
+position = Vector2(1864, -232)
+
+[node name="Gusano_Tampa" parent="Enemigos" instance=ExtResource("19_ji02b")]
+position = Vector2(2216, -192)
+
+[node name="Murcielago" parent="Enemigos" instance=ExtResource("20_y8y2p")]
+position = Vector2(1768, -480)
+
+[node name="Green-Skeleton" parent="Enemigos" instance=ExtResource("22_ym57c")]
+position = Vector2(1992, -224)
+
+[node name="Fantasma_Griton" parent="Enemigos" instance=ExtResource("23_1lgid")]
+position = Vector2(1568, -448)
+
+[node name="Objetos" type="Node2D" parent="."]
+
+[node name="Diamante_Rojo" parent="Objetos" instance=ExtResource("11_r8ulm")]
+position = Vector2(1272, 288)
+
+[node name="Diamante_Azul" parent="Objetos" instance=ExtResource("10_cgm2s")]
+position = Vector2(1648, 288)
+
+[node name="SilverCoin" parent="Objetos" instance=ExtResource("8_rajc2")]
+position = Vector2(1456, 288)
+
+[node name="Pocion_Vida" parent="Objetos" instance=ExtResource("7_gmxbr")]
+position = Vector2(1392, 288)
+
+[node name="GoldCoin" parent="Objetos" instance=ExtResource("6_egts1")]
+position = Vector2(1520, 296)
+
+[node name="Objeto_Llave" parent="Objetos" instance=ExtResource("5_ec6we")]
+position = Vector2(1592, 288)
+
+[node name="Player" type="Node2D" parent="."]
+
+[node name="Player_Guerrera" parent="Player" instance=ExtResource("31_6k2hp")]
+position = Vector2(1149, 499)

@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=3 uid="uid://bgte4mv5ssfo2"]
+
+[ext_resource type="Texture2D" uid="uid://bog8mfyl5a3ag" path="res://Assests/Imagenes/Cuevas/Opcion_2/background1.png" id="1_0tv2k"]
+[ext_resource type="Texture2D" uid="uid://c1drlmkjd7bwv" path="res://Assests/Imagenes/Cuevas/Opcion_2/background2.png" id="2_vjcyq"]
+[ext_resource type="Texture2D" uid="uid://b60bbrb0dm6nt" path="res://Assests/Imagenes/Cuevas/Opcion_2/background3.png" id="3_jgm3i"]
+[ext_resource type="Texture2D" uid="uid://b6xxpe4qxat1x" path="res://Assests/Imagenes/Cuevas/Opcion_2/background4a.png" id="4_quabr"]
+[ext_resource type="Texture2D" uid="uid://c1h7fw1q3p2t5" path="res://Assests/Imagenes/Cuevas/Opcion_2/background4b.png" id="5_0tksg"]
+
+[node name="Fondo_Cuevas_Paralax_2" type="Node2D"]
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.2, 1)
+repeat_size = Vector2(960, 0)
+repeat_times = 4
+
+[node name="Background1" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(480, 240)
+texture = ExtResource("1_0tv2k")
+
+[node name="Parallax2D2" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.4, 1)
+repeat_size = Vector2(960, 0)
+repeat_times = 4
+
+[node name="Background2" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(480, 240)
+texture = ExtResource("2_vjcyq")
+
+[node name="Parallax2D3" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.7, 1)
+repeat_size = Vector2(960, 0)
+repeat_times = 4
+
+[node name="Background3" type="Sprite2D" parent="Parallax2D3"]
+position = Vector2(480, 240)
+texture = ExtResource("3_jgm3i")
+
+[node name="Parallax2D4" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.9, 1)
+repeat_size = Vector2(960, 0)
+repeat_times = 4
+
+[node name="Background4a" type="Sprite2D" parent="Parallax2D4"]
+position = Vector2(480, 240)
+texture = ExtResource("4_quabr")
+
+[node name="Parallax2D5" type="Parallax2D" parent="."]
+repeat_size = Vector2(960, 0)
+repeat_times = 4
+
+[node name="Background4b" type="Sprite2D" parent="Parallax2D5"]
+position = Vector2(480, 240)
+texture = ExtResource("5_0tksg")

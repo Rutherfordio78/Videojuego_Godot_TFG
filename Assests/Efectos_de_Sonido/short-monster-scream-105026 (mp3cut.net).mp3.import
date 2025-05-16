@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bfan1jg3oybxa"
+path="res://.godot/imported/short-monster-scream-105026 (mp3cut.net).mp3-e45ac9935a19b55aa8752b4056316921.mp3str"
+
+[deps]
+
+source_file="res://Assests/Efectos_de_Sonido/short-monster-scream-105026 (mp3cut.net).mp3"
+dest_files=["res://.godot/imported/short-monster-scream-105026 (mp3cut.net).mp3-e45ac9935a19b55aa8752b4056316921.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

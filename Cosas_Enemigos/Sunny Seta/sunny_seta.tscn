@@ -1,0 +1,187 @@
+[gd_scene load_steps=23 format=3 uid="uid://bo00yvomv18s6"]
+
+[ext_resource type="Texture2D" uid="uid://dxfyn54xlrkva" path="res://Assests/Imagenes/Enemigos/Sunny Seta/sunny-mushroom-walk.png" id="1_gi6iu"]
+[ext_resource type="Script" path="res://Cosas_Enemigos/Sunny Seta/sunny_seta.gd" id="1_j6boa"]
+[ext_resource type="AudioStream" uid="uid://sxcpfyrdftqv" path="res://Assests/Efectos_de_Sonido/Monstruo_Normal_Muerte.mp3" id="4_ff1pb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_26mpr"]
+size = Vector2(20, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_do1ft"]
+atlas = ExtResource("1_gi6iu")
+region = Rect2(0, 0, 41, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oxnwg"]
+atlas = ExtResource("1_gi6iu")
+region = Rect2(41, 0, 41, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sfq0h"]
+atlas = ExtResource("1_gi6iu")
+region = Rect2(82, 0, 41, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o36ts"]
+atlas = ExtResource("1_gi6iu")
+region = Rect2(123, 0, 41, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u1vs4"]
+atlas = ExtResource("1_gi6iu")
+region = Rect2(164, 0, 41, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7gekv"]
+atlas = ExtResource("1_gi6iu")
+region = Rect2(205, 0, 41, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ccgh"]
+atlas = ExtResource("1_gi6iu")
+region = Rect2(246, 0, 41, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1nqe6"]
+atlas = ExtResource("1_gi6iu")
+region = Rect2(287, 0, 41, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hn65u"]
+atlas = ExtResource("1_gi6iu")
+region = Rect2(328, 0, 41, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qnm3v"]
+atlas = ExtResource("1_gi6iu")
+region = Rect2(369, 0, 41, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8wx87"]
+atlas = ExtResource("1_gi6iu")
+region = Rect2(41, 0, 41, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iu5jl"]
+atlas = ExtResource("1_gi6iu")
+region = Rect2(123, 0, 41, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r100w"]
+atlas = ExtResource("1_gi6iu")
+region = Rect2(41, 0, 41, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t78kt"]
+atlas = ExtResource("1_gi6iu")
+region = Rect2(123, 0, 41, 30)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bslqs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_do1ft")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oxnwg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sfq0h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o36ts")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u1vs4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7gekv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ccgh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1nqe6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hn65u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qnm3v")
+}],
+"loop": true,
+"name": &"Correr",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8wx87")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iu5jl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r100w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t78kt")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 6.0
+}]
+
+[sub_resource type="GDScript" id="GDScript_c0ugd"]
+script/source = "extends Node2D
+
+# Definimos dos señales:
+signal Algo_Golpeado(area) 
+signal Golpe_Recibido(area)
+
+@onready var hurt_box = $Hurt_Box      # Referencia al Area2D de la \"Hurt_Box\"
+@onready var hit_box =  $Hit_Box        # Referencia al Area2D de la \"Hit_Box\"
+
+func _ready():
+	# Conectamos las señales de 'body_entered' de cada Area2D a funciones locales.
+	# Asegúrate de que Hurt_Box y Hit_Box estén configuradas como Area2D en el editor.
+	hurt_box.connect(\"area_entered\", Callable(self, \"_on_hurt_box_area_entered\"))
+	hit_box.connect(\"area_entered\", Callable(self, \"_on_hit_box_area_entered\"))
+
+func _on_hurt_box_body_entered(area):
+	print(\"enemigo Hurt_Box enemigo detectó un area:\", area)
+	# Si la hurt box detecta un 'body' al que podemos dañar, 
+	# emitimos la señal correspondiente para que el personaje maneje el \"dar daño\".
+	emit_signal(\"Algo_Golpeado\", area)
+
+func _on_hit_box_body_entered(area):
+	print(\"enemigo Hit_Box enemigo detectó un area:\", area)
+	# Si 'body' es el objeto que nos golpea, podemos emitir una señal
+	# para que el script del personaje maneje la lógica de recibir daño.
+	emit_signal(\"Golpe_Recibido\", area)
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e73pq"]
+radius = 6.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bwbap"]
+
+[node name="Sunny_Seta" type="CharacterBody2D"]
+collision_layer = 524288
+script = ExtResource("1_j6boa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_26mpr")
+
+[node name="Animaciones" type="Node2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Animaciones"]
+sprite_frames = SubResource("SpriteFrames_bslqs")
+animation = &"Idle"
+
+[node name="Boxes_Daño" type="Node2D" parent="."]
+script = SubResource("GDScript_c0ugd")
+
+[node name="Hurt_Box" type="Area2D" parent="Boxes_Daño"]
+collision_layer = 1048576
+collision_mask = 2048
+
+[node name="Area_Daño" type="CollisionShape2D" parent="Boxes_Daño/Hurt_Box"]
+shape = SubResource("CircleShape2D_e73pq")
+
+[node name="Hit_Box" type="Area2D" parent="Boxes_Daño"]
+collision_layer = 2097152
+collision_mask = 1024
+
+[node name="Area_Herido" type="CollisionShape2D" parent="Boxes_Daño/Hit_Box"]
+shape = SubResource("CircleShape2D_bwbap")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_ff1pb")

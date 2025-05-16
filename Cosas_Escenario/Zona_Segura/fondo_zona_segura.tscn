@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvnksuu3nj4dt"]
+
+[ext_resource type="Texture2D" uid="uid://cuq88f60catbw" path="res://Assests/Imagenes/Colinas/Environment/PNG/sky.png" id="1_eamsw"]
+[ext_resource type="Texture2D" uid="uid://nwnj1516ww46" path="res://Assests/Imagenes/Colinas/Environment/PNG/clouds.png" id="2_q1ya0"]
+
+[node name="Fondo" type="Node2D"]
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+repeat_size = Vector2(2000, 0)
+autoscroll = Vector2(2, 0)
+repeat_times = 2
+
+[node name="Sky" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(577, 390)
+scale = Vector2(21.8393, 6.32895)
+texture = ExtResource("1_eamsw")
+
+[node name="Parallax2D2" type="Parallax2D" parent="."]
+scroll_offset = Vector2(-36, -192)
+repeat_size = Vector2(2000, 0)
+autoscroll = Vector2(5, 0)
+repeat_times = 2
+
+[node name="Clouds" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(578, 700)
+scale = Vector2(4.49265, 5.52542)
+texture = ExtResource("2_q1ya0")

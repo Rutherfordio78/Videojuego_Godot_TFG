@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://cuge2p3dffq6n"]
+
+[ext_resource type="Texture2D" uid="uid://dullh3515x7wn" path="res://Assests/Imagenes/Players/Caperucita_Roja/Flecha/projectile.png" id="1_rgnuw"]
+[ext_resource type="Script" path="res://Cosas_Personajes/Caperucita_Roja/flecha_izquierda.gd" id="1_sxlxp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pvmbm"]
+size = Vector2(18, 2)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pwe11"]
+radius = 2.0
+
+[node name="Flecha_Izquierda" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 5
+script = ExtResource("1_sxlxp")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(1, 0)
+scale = Vector2(0.5875, 1)
+texture = ExtResource("1_rgnuw")
+flip_h = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_pvmbm")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 1024
+collision_mask = 2097152
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-6, 0)
+shape = SubResource("CircleShape2D_pwe11")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

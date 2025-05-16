@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://qdurmbyh1tqa"
+path="res://.godot/imported/Dummy_Hit (mp3cut.net).mp3-1fad75c333883951b9d79d6094bba86c.mp3str"
+
+[deps]
+
+source_file="res://Assests/Efectos_de_Sonido/Dummy_Hit (mp3cut.net).mp3"
+dest_files=["res://.godot/imported/Dummy_Hit (mp3cut.net).mp3-1fad75c333883951b9d79d6094bba86c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

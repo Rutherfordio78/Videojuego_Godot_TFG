@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://btpogcs85wh2y"
+path="res://.godot/imported/Ant mine.mp3-df16fdf36540ce95f32ea8f71405f397.mp3str"
+
+[deps]
+
+source_file="res://Assests/Musicas/Ant mine.mp3"
+dest_files=["res://.godot/imported/Ant mine.mp3-df16fdf36540ce95f32ea8f71405f397.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

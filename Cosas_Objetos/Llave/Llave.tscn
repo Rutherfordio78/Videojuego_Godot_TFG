@@ -1,0 +1,72 @@
+[gd_scene load_steps=12 format=3 uid="uid://1qtqldkw44qr"]
+
+[ext_resource type="Texture2D" uid="uid://cnwp02m3l6c2i" path="res://Assests/Imagenes/Objetos/Llave/Idle/1.png" id="1_0dpvs"]
+[ext_resource type="Script" path="res://Cosas_Objetos/Llave/llave.gd" id="1_3ns4t"]
+[ext_resource type="Texture2D" uid="uid://dbfkt73xdxr25" path="res://Assests/Imagenes/Objetos/Llave/Idle/2.png" id="2_88qps"]
+[ext_resource type="Texture2D" uid="uid://4qk3olwvflfa" path="res://Assests/Imagenes/Objetos/Llave/Idle/3.png" id="3_0c6ap"]
+[ext_resource type="Texture2D" uid="uid://7hibop8u2tcd" path="res://Assests/Imagenes/Objetos/Llave/Idle/4.png" id="4_y1kay"]
+[ext_resource type="Texture2D" uid="uid://c7f6rbqvljstu" path="res://Assests/Imagenes/Objetos/Llave/Idle/5.png" id="5_denc6"]
+[ext_resource type="Texture2D" uid="uid://7diigg6ny7k1" path="res://Assests/Imagenes/Objetos/Llave/Idle/6.png" id="6_h4kxg"]
+[ext_resource type="Texture2D" uid="uid://cadkbuv8h5eje" path="res://Assests/Imagenes/Objetos/Llave/Idle/7.png" id="7_rfag6"]
+[ext_resource type="Texture2D" uid="uid://cbjsdqtahf8qj" path="res://Assests/Imagenes/Objetos/Llave/Idle/8.png" id="8_4ogxs"]
+[ext_resource type="AudioStream" uid="uid://lka5exlrynqb" path="res://Assests/Efectos_de_Sonido/keys-jingling-199749.mp3" id="10_l3o1q"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_opx63"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_0dpvs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_88qps")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_0c6ap")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_y1kay")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_denc6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_h4kxg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_rfag6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_4ogxs")
+}],
+"loop": true,
+"name": &"Giro",
+"speed": 6.0
+}]
+
+[node name="Objeto_Llave" type="RigidBody2D"]
+collision_layer = 16
+collision_mask = 19
+script = ExtResource("1_3ns4t")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_opx63")
+animation = &"Giro"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(2, 2)
+build_mode = 1
+polygon = PackedVector2Array(-4, -1, -4, -5, -2, -7, 2, -7, 4, -5, 4, -1, 2, 1, 2, 3, 2, 8, -2, 8, -2, 1)
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 512
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Area2D"]
+scale = Vector2(2, 2)
+build_mode = 1
+polygon = PackedVector2Array(-4, -1, -4, -5, -2, -7, 2, -7, 4, -5, 4, -1, 2, 1, 2, 3, 2, 8, -2, 8, -2, 1)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_l3o1q")
+volume_db = 15.0

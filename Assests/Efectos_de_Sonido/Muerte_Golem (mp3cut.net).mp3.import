@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b0hceph55nvfh"
+path="res://.godot/imported/Muerte_Golem (mp3cut.net).mp3-876915122434539e9b001af5ab6b6d94.mp3str"
+
+[deps]
+
+source_file="res://Assests/Efectos_de_Sonido/Muerte_Golem (mp3cut.net).mp3"
+dest_files=["res://.godot/imported/Muerte_Golem (mp3cut.net).mp3-876915122434539e9b001af5ab6b6d94.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,95 @@
+[gd_scene load_steps=11 format=3 uid="uid://cul4kmteen433"]
+
+[ext_resource type="Script" path="res://Cosas_Objetos/Tienda_De_Mejoras/tienda_de_mejoras.gd" id="1_g0wrc"]
+[ext_resource type="Texture2D" uid="uid://bi6nale37risp" path="res://Assests/Imagenes/Tienda/shop_anim.png" id="1_o2iqf"]
+[ext_resource type="PackedScene" uid="uid://dib5xy81tvwkp" path="res://Cosas_Menus/Menu_Tienda/menu_tienda.tscn" id="3_bvx6c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yyl1v"]
+atlas = ExtResource("1_o2iqf")
+region = Rect2(0, 0, 118, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p47yv"]
+atlas = ExtResource("1_o2iqf")
+region = Rect2(118, 0, 118, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b611p"]
+atlas = ExtResource("1_o2iqf")
+region = Rect2(236, 0, 118, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gqjgq"]
+atlas = ExtResource("1_o2iqf")
+region = Rect2(354, 0, 118, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5i6dg"]
+atlas = ExtResource("1_o2iqf")
+region = Rect2(472, 0, 118, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g6leb"]
+atlas = ExtResource("1_o2iqf")
+region = Rect2(590, 0, 118, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7ad6a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yyl1v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p47yv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b611p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gqjgq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5i6dg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g6leb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[node name="Tienda_De_Mejoras" type="StaticBody2D"]
+position = Vector2(536, 544)
+collision_layer = 0
+script = ExtResource("1_g0wrc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_7ad6a")
+frame_progress = 0.11437
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-56, 64, -56, -24, 56, -24, 56, 64)
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 512
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2(1.14441e-05, 40)
+scale = Vector2(0.294643, 0.408026)
+polygon = PackedVector2Array(-56, 64, -56, -24, 56, -24, 56, 64)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
+[node name="Pop_Up_Tienda" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Menu_Tienda" parent="Pop_Up_Tienda" instance=ExtResource("3_bvx6c")]
+layout_mode = 1
+anchor_left = -3.6
+anchor_top = -6.6
+anchor_right = 4.0
+anchor_bottom = 0.6
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D" to="Pop_Up_Tienda/Menu_Tienda" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

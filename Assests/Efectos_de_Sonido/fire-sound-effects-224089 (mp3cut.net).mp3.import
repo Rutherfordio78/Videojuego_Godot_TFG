@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b0hl82k51gn06"
+path="res://.godot/imported/fire-sound-effects-224089 (mp3cut.net).mp3-ed147178e53ebe41622bcf0d449e6e0a.mp3str"
+
+[deps]
+
+source_file="res://Assests/Efectos_de_Sonido/fire-sound-effects-224089 (mp3cut.net).mp3"
+dest_files=["res://.godot/imported/fire-sound-effects-224089 (mp3cut.net).mp3-ed147178e53ebe41622bcf0d449e6e0a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

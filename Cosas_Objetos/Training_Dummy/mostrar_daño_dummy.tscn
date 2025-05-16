@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8es55d81yqfy"]
+
+[ext_resource type="FontFile" uid="uid://dfffu801f73p7" path="res://Assests/Tipos_de_Letra/MedievalSharp-Regular.ttf" id="1_8wx8j"]
+[ext_resource type="Script" path="res://Cosas_Objetos/Training_Dummy/mostrar_daño_dummy.gd" id="2_jkuv7"]
+
+[node name="Mostrar_Daño_Dummy" type="Label"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1131.0
+offset_bottom = -636.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_8wx8j")
+theme_override_font_sizes/font_size = 10
+text = "texto
+"
+script = ExtResource("2_jkuv7")

@@ -1,0 +1,1148 @@
+[gd_scene load_steps=24 format=3 uid="uid://duyttvfhktekp"]
+
+[ext_resource type="Script" path="res://Cosas_Menus/Menu_TocaDiscos/menu_toca_discos.gd" id="1_cay2e"]
+[ext_resource type="Texture2D" uid="uid://bp0j4lxouwf3r" path="res://Assests/Imagenes/GUI_2/Fantasy Minimal Pixel Art GUI by eta-commercial-free/UI/RectangleBox_96x96.png" id="1_vqt3c"]
+[ext_resource type="Texture2D" uid="uid://sadvwqswln4i" path="res://Assests/Imagenes/GUI_2/Fantasy Minimal Pixel Art GUI by eta-commercial-free/UI/TitleBox_64x16.png" id="2_ay72j"]
+[ext_resource type="AudioStream" uid="uid://b8f75nw65kc87" path="res://Assests/Musicas/Descanso.mp3" id="2_uhiii"]
+[ext_resource type="FontFile" uid="uid://dfffu801f73p7" path="res://Assests/Tipos_de_Letra/MedievalSharp-Regular.ttf" id="3_c3t5i"]
+[ext_resource type="AudioStream" uid="uid://b2uxiwj80s3s0" path="res://Assests/Musicas/Comienzo.mp3" id="3_jx1jd"]
+[ext_resource type="AudioStream" uid="uid://2yi0dyjvxp74" path="res://Assests/Musicas/Mediaval.mp3" id="4_wwi60"]
+[ext_resource type="AudioStream" uid="uid://dr71hqh8288hp" path="res://Assests/Musicas/Me muero.mp3" id="5_4r8tc"]
+[ext_resource type="AudioStream" uid="uid://buinudthpim1f" path="res://Assests/Musicas/tema_pantano.mp3" id="6_hxyyv"]
+[ext_resource type="AudioStream" uid="uid://c3re884j7yurt" path="res://Assests/Musicas/Castillo (1).mp3" id="7_7aukh"]
+[ext_resource type="AudioStream" uid="uid://v5tdv5jj37lc" path="res://Assests/Musicas/Epic.mp3" id="8_wsbbv"]
+[ext_resource type="AudioStream" uid="uid://cdxkqwxufdnlo" path="res://Assests/Musicas/Extra Pop Latino xd lyrics pantano.mp3" id="9_k7myh"]
+[ext_resource type="AudioStream" uid="uid://u3u55qhq0cou" path="res://Assests/Musicas/Inospito.mp3" id="10_cwrnk"]
+[ext_resource type="AudioStream" uid="uid://dxx3nchsjraml" path="res://Assests/Musicas/Vacio.mp3" id="11_vyt71"]
+[ext_resource type="AudioStream" uid="uid://u8u808qhn6cy" path="res://Assests/Musicas/Tierra sagra.mp3" id="12_3cyug"]
+[ext_resource type="AudioStream" uid="uid://bvmbpg5qostaa" path="res://Assests/Musicas/Mr.Doctor.mp3" id="13_wiob5"]
+[ext_resource type="AudioStream" uid="uid://1doppja4kmfd" path="res://Assests/Musicas/Gone.mp3" id="14_7njsp"]
+[ext_resource type="AudioStream" uid="uid://de2v4ynedd5wx" path="res://Assests/Musicas/Spitiru.mp3" id="15_lfhx5"]
+[ext_resource type="AudioStream" uid="uid://ck72f77gbk150" path="res://Assests/Musicas/Wesley Adventures.mp3" id="16_uxih3"]
+[ext_resource type="AudioStream" uid="uid://cjspeoc6b1xk4" path="res://Assests/Musicas/Medival Duro.mp3" id="17_4r0v1"]
+[ext_resource type="AudioStream" uid="uid://t0hlb206f3sq" path="res://Assests/Musicas/Festival.mp3" id="18_782w0"]
+[ext_resource type="AudioStream" uid="uid://br4bht2i068a" path="res://Assests/Musicas/Stormy.mp3" id="19_aqn8i"]
+[ext_resource type="AudioStream" uid="uid://btpogcs85wh2y" path="res://Assests/Musicas/Ant mine.mp3" id="20_dytto"]
+
+[node name="Menu_TocaDiscos" type="Control"]
+layout_mode = 3
+anchor_right = 0.333333
+anchor_bottom = 0.395062
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cay2e")
+metadata/_edit_use_anchors_ = true
+
+[node name="Canciones" type="Node" parent="."]
+
+[node name="Descanso" type="AudioStreamPlayer2D" parent="Canciones"]
+position = Vector2(128, 128)
+stream = ExtResource("2_uhiii")
+volume_db = -5.0
+max_distance = 20000.0
+parameters/looping = true
+
+[node name="Comienzo" type="AudioStreamPlayer2D" parent="Canciones"]
+position = Vector2(128, 128)
+stream = ExtResource("3_jx1jd")
+volume_db = -5.0
+max_distance = 20000.0
+parameters/looping = true
+
+[node name="Mediaval" type="AudioStreamPlayer2D" parent="Canciones"]
+position = Vector2(128, 128)
+stream = ExtResource("4_wwi60")
+volume_db = -5.0
+max_distance = 20000.0
+parameters/looping = true
+
+[node name="Muerte" type="AudioStreamPlayer2D" parent="Canciones"]
+position = Vector2(128, 128)
+stream = ExtResource("5_4r8tc")
+volume_db = -5.0
+max_distance = 20000.0
+parameters/looping = true
+
+[node name="Swamp" type="AudioStreamPlayer2D" parent="Canciones"]
+position = Vector2(128, 128)
+stream = ExtResource("6_hxyyv")
+volume_db = -5.0
+max_distance = 20000.0
+parameters/looping = true
+
+[node name="Castillo" type="AudioStreamPlayer2D" parent="Canciones"]
+position = Vector2(128, 128)
+stream = ExtResource("7_7aukh")
+volume_db = -5.0
+max_distance = 20000.0
+parameters/looping = true
+
+[node name="Epic" type="AudioStreamPlayer2D" parent="Canciones"]
+position = Vector2(128, 128)
+stream = ExtResource("8_wsbbv")
+volume_db = -5.0
+max_distance = 20000.0
+parameters/looping = true
+
+[node name="Sorpresa" type="AudioStreamPlayer2D" parent="Canciones"]
+position = Vector2(128, 128)
+stream = ExtResource("9_k7myh")
+volume_db = -5.0
+max_distance = 20000.0
+parameters/looping = true
+
+[node name="Inospito" type="AudioStreamPlayer2D" parent="Canciones"]
+position = Vector2(128, 128)
+stream = ExtResource("10_cwrnk")
+volume_db = -5.0
+max_distance = 20000.0
+parameters/looping = true
+
+[node name="Vacio" type="AudioStreamPlayer2D" parent="Canciones"]
+position = Vector2(128, 128)
+stream = ExtResource("11_vyt71")
+volume_db = -5.0
+max_distance = 20000.0
+parameters/looping = true
+
+[node name="Sagra" type="AudioStreamPlayer2D" parent="Canciones"]
+position = Vector2(128, 128)
+stream = ExtResource("12_3cyug")
+volume_db = -5.0
+max_distance = 20000.0
+parameters/looping = true
+
+[node name="Misterio" type="AudioStreamPlayer2D" parent="Canciones"]
+position = Vector2(128, 128)
+stream = ExtResource("13_wiob5")
+volume_db = -5.0
+max_distance = 20000.0
+parameters/looping = true
+
+[node name="Crimen" type="AudioStreamPlayer2D" parent="Canciones"]
+position = Vector2(128, 128)
+stream = ExtResource("14_7njsp")
+volume_db = -5.0
+max_distance = 20000.0
+parameters/looping = true
+
+[node name="Sinestro" type="AudioStreamPlayer2D" parent="Canciones"]
+position = Vector2(128, 128)
+stream = ExtResource("15_lfhx5")
+volume_db = -5.0
+max_distance = 20000.0
+parameters/looping = true
+
+[node name="Pixel_Adventure" type="AudioStreamPlayer2D" parent="Canciones"]
+position = Vector2(128, 128)
+stream = ExtResource("16_uxih3")
+volume_db = -5.0
+max_distance = 20000.0
+parameters/looping = true
+
+[node name="Hard_Medieval" type="AudioStreamPlayer2D" parent="Canciones"]
+position = Vector2(128, 128)
+stream = ExtResource("17_4r0v1")
+volume_db = -5.0
+max_distance = 20000.0
+parameters/looping = true
+
+[node name="Festival" type="AudioStreamPlayer2D" parent="Canciones"]
+position = Vector2(128, 128)
+stream = ExtResource("18_782w0")
+volume_db = -5.0
+max_distance = 20000.0
+parameters/looping = true
+
+[node name="Progreso" type="AudioStreamPlayer2D" parent="Canciones"]
+position = Vector2(128, 128)
+stream = ExtResource("19_aqn8i")
+volume_db = -5.0
+max_distance = 20000.0
+parameters/looping = true
+
+[node name="EuMalke" type="AudioStreamPlayer2D" parent="Canciones"]
+position = Vector2(128, 128)
+stream = ExtResource("20_dytto")
+volume_db = -5.0
+max_distance = 20000.0
+parameters/looping = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource("1_vqt3c")
+metadata/_edit_use_anchors_ = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.125
+anchor_top = 0.125
+anchor_right = 0.875
+anchor_bottom = 0.875
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+alignment = 1
+
+[node name="Caja_Compra_1" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_ay72j")
+
+[node name="Nombre_Cancion" type="Label" parent="ScrollContainer/VBoxContainer/Caja_Compra_1"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 14.0
+offset_right = 115.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 20
+text = "Descanso"
+
+[node name="Precio_1" type="Label" parent="ScrollContainer/VBoxContainer/Caja_Compra_1"]
+visible = false
+layout_mode = 0
+offset_left = 117.0
+offset_top = 15.0
+offset_right = 176.0
+offset_bottom = 39.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 20
+text = "Precio
+"
+
+[node name="Comprar_1" type="Button" parent="ScrollContainer/VBoxContainer/Caja_Compra_1"]
+visible = false
+layout_mode = 0
+offset_left = 188.0
+offset_top = 13.0
+offset_right = 222.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 14
+text = "Buy"
+
+[node name="Reproducir_1" type="Button" parent="ScrollContainer/VBoxContainer/Caja_Compra_1"]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 13.0
+offset_right = 225.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 14
+text = "Play"
+
+[node name="Caja_Compra_2" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_ay72j")
+
+[node name="Nombre_Cancion" type="Label" parent="ScrollContainer/VBoxContainer/Caja_Compra_2"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 14.0
+offset_right = 115.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 20
+text = "Comienzo"
+
+[node name="Precio_2" type="Label" parent="ScrollContainer/VBoxContainer/Caja_Compra_2"]
+visible = false
+layout_mode = 0
+offset_left = 117.0
+offset_top = 15.0
+offset_right = 176.0
+offset_bottom = 39.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 20
+text = "Precio
+"
+
+[node name="Comprar_2" type="Button" parent="ScrollContainer/VBoxContainer/Caja_Compra_2"]
+visible = false
+layout_mode = 0
+offset_left = 188.0
+offset_top = 13.0
+offset_right = 222.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 14
+text = "Buy"
+
+[node name="Reproducir_2" type="Button" parent="ScrollContainer/VBoxContainer/Caja_Compra_2"]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 13.0
+offset_right = 225.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 14
+text = "Play"
+
+[node name="Caja_Compra_3" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_ay72j")
+
+[node name="Nombre_Cancion" type="Label" parent="ScrollContainer/VBoxContainer/Caja_Compra_3"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 14.0
+offset_right = 115.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 20
+text = "Mediaval"
+
+[node name="Precio_3" type="Label" parent="ScrollContainer/VBoxContainer/Caja_Compra_3"]
+visible = false
+layout_mode = 0
+offset_left = 117.0
+offset_top = 15.0
+offset_right = 176.0
+offset_bottom = 39.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 20
+text = "Precio
+"
+
+[node name="Comprar_3" type="Button" parent="ScrollContainer/VBoxContainer/Caja_Compra_3"]
+visible = false
+layout_mode = 0
+offset_left = 188.0
+offset_top = 13.0
+offset_right = 222.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 14
+text = "Buy"
+
+[node name="Reproducir_3" type="Button" parent="ScrollContainer/VBoxContainer/Caja_Compra_3"]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 13.0
+offset_right = 225.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 14
+text = "Play"
+
+[node name="Caja_Compra_11" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_ay72j")
+
+[node name="Nombre_Cancion" type="Label" parent="ScrollContainer/VBoxContainer/Caja_Compra_11"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 14.0
+offset_right = 115.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 20
+text = "Sagra"
+
+[node name="Precio_11" type="Label" parent="ScrollContainer/VBoxContainer/Caja_Compra_11"]
+visible = false
+layout_mode = 0
+offset_left = 117.0
+offset_top = 15.0
+offset_right = 176.0
+offset_bottom = 39.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 20
+text = "Precio
+"
+
+[node name="Comprar_11" type="Button" parent="ScrollContainer/VBoxContainer/Caja_Compra_11"]
+visible = false
+layout_mode = 0
+offset_left = 188.0
+offset_top = 13.0
+offset_right = 222.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 14
+text = "Buy"
+
+[node name="Reproducir_11" type="Button" parent="ScrollContainer/VBoxContainer/Caja_Compra_11"]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 13.0
+offset_right = 225.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 14
+text = "Play"
+
+[node name="Caja_Compra_4" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_ay72j")
+
+[node name="Nombre_Cancion" type="Label" parent="ScrollContainer/VBoxContainer/Caja_Compra_4"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 14.0
+offset_right = 115.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 20
+text = "Muerte"
+
+[node name="Precio_4" type="Label" parent="ScrollContainer/VBoxContainer/Caja_Compra_4"]
+layout_mode = 0
+offset_left = 117.0
+offset_top = 15.0
+offset_right = 176.0
+offset_bottom = 39.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 20
+text = "Precio
+"
+
+[node name="Comprar_4" type="Button" parent="ScrollContainer/VBoxContainer/Caja_Compra_4"]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 13.0
+offset_right = 222.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 14
+text = "Buy"
+
+[node name="Reproducir_4" type="Button" parent="ScrollContainer/VBoxContainer/Caja_Compra_4"]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 13.0
+offset_right = 225.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 14
+text = "Play"
+
+[node name="Caja_Compra_5" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_ay72j")
+
+[node name="Nombre_Cancion" type="Label" parent="ScrollContainer/VBoxContainer/Caja_Compra_5"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 14.0
+offset_right = 115.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 20
+text = "Swamp"
+
+[node name="Precio_5" type="Label" parent="ScrollContainer/VBoxContainer/Caja_Compra_5"]
+layout_mode = 0
+offset_left = 117.0
+offset_top = 15.0
+offset_right = 176.0
+offset_bottom = 39.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 20
+text = "Precio
+"
+
+[node name="Comprar_5" type="Button" parent="ScrollContainer/VBoxContainer/Caja_Compra_5"]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 13.0
+offset_right = 222.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 14
+text = "Buy"
+
+[node name="Reproducir_5" type="Button" parent="ScrollContainer/VBoxContainer/Caja_Compra_5"]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 13.0
+offset_right = 225.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 14
+text = "Play"
+
+[node name="Caja_Compra_6" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_ay72j")
+
+[node name="Nombre_Cancion" type="Label" parent="ScrollContainer/VBoxContainer/Caja_Compra_6"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 14.0
+offset_right = 115.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 20
+text = "Castillo"
+
+[node name="Precio_6" type="Label" parent="ScrollContainer/VBoxContainer/Caja_Compra_6"]
+layout_mode = 0
+offset_left = 117.0
+offset_top = 15.0
+offset_right = 176.0
+offset_bottom = 39.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 20
+text = "Precio
+"
+
+[node name="Comprar_6" type="Button" parent="ScrollContainer/VBoxContainer/Caja_Compra_6"]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 13.0
+offset_right = 222.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 14
+text = "Buy"
+
+[node name="Reproducir_6" type="Button" parent="ScrollContainer/VBoxContainer/Caja_Compra_6"]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 13.0
+offset_right = 225.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 14
+text = "Play"
+
+[node name="Caja_Compra_7" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_ay72j")
+
+[node name="Nombre_Cancion" type="Label" parent="ScrollContainer/VBoxContainer/Caja_Compra_7"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 14.0
+offset_right = 115.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 20
+text = "Epic"
+
+[node name="Precio_7" type="Label" parent="ScrollContainer/VBoxContainer/Caja_Compra_7"]
+layout_mode = 0
+offset_left = 117.0
+offset_top = 15.0
+offset_right = 176.0
+offset_bottom = 39.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 20
+text = "Precio
+"
+
+[node name="Comprar_7" type="Button" parent="ScrollContainer/VBoxContainer/Caja_Compra_7"]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 13.0
+offset_right = 222.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 14
+text = "Buy"
+
+[node name="Reproducir_7" type="Button" parent="ScrollContainer/VBoxContainer/Caja_Compra_7"]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 13.0
+offset_right = 225.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 14
+text = "Play"
+
+[node name="Caja_Compra_8" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_ay72j")
+
+[node name="Nombre_Cancion" type="Label" parent="ScrollContainer/VBoxContainer/Caja_Compra_8"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 14.0
+offset_right = 115.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 20
+text = "Sorpresa"
+
+[node name="Precio_8" type="Label" parent="ScrollContainer/VBoxContainer/Caja_Compra_8"]
+layout_mode = 0
+offset_left = 117.0
+offset_top = 15.0
+offset_right = 176.0
+offset_bottom = 39.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 20
+text = "Precio
+"
+
+[node name="Comprar_8" type="Button" parent="ScrollContainer/VBoxContainer/Caja_Compra_8"]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 13.0
+offset_right = 222.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 14
+text = "Buy"
+
+[node name="Reproducir_8" type="Button" parent="ScrollContainer/VBoxContainer/Caja_Compra_8"]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 13.0
+offset_right = 225.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 14
+text = "Play"
+
+[node name="Caja_Compra_9" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_ay72j")
+
+[node name="Nombre_Cancion" type="Label" parent="ScrollContainer/VBoxContainer/Caja_Compra_9"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 14.0
+offset_right = 115.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 20
+text = "Inospito"
+
+[node name="Precio_9" type="Label" parent="ScrollContainer/VBoxContainer/Caja_Compra_9"]
+layout_mode = 0
+offset_left = 117.0
+offset_top = 15.0
+offset_right = 176.0
+offset_bottom = 39.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 20
+text = "Precio
+"
+
+[node name="Comprar_9" type="Button" parent="ScrollContainer/VBoxContainer/Caja_Compra_9"]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 13.0
+offset_right = 222.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 14
+text = "Buy"
+
+[node name="Reproducir_9" type="Button" parent="ScrollContainer/VBoxContainer/Caja_Compra_9"]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 13.0
+offset_right = 225.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 14
+text = "Play"
+
+[node name="Caja_Compra_10" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_ay72j")
+
+[node name="Nombre_Cancion" type="Label" parent="ScrollContainer/VBoxContainer/Caja_Compra_10"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 14.0
+offset_right = 115.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 20
+text = "Vacio"
+
+[node name="Precio_10" type="Label" parent="ScrollContainer/VBoxContainer/Caja_Compra_10"]
+layout_mode = 0
+offset_left = 117.0
+offset_top = 15.0
+offset_right = 176.0
+offset_bottom = 39.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 20
+text = "Precio
+"
+
+[node name="Comprar_10" type="Button" parent="ScrollContainer/VBoxContainer/Caja_Compra_10"]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 13.0
+offset_right = 222.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 14
+text = "Buy"
+
+[node name="Reproducir_10" type="Button" parent="ScrollContainer/VBoxContainer/Caja_Compra_10"]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 13.0
+offset_right = 225.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 14
+text = "Play"
+
+[node name="Caja_Compra_12" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_ay72j")
+
+[node name="Nombre_Cancion" type="Label" parent="ScrollContainer/VBoxContainer/Caja_Compra_12"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 14.0
+offset_right = 115.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 20
+text = "Misterio"
+
+[node name="Precio_12" type="Label" parent="ScrollContainer/VBoxContainer/Caja_Compra_12"]
+layout_mode = 0
+offset_left = 117.0
+offset_top = 15.0
+offset_right = 176.0
+offset_bottom = 39.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 20
+text = "Precio
+"
+
+[node name="Comprar_12" type="Button" parent="ScrollContainer/VBoxContainer/Caja_Compra_12"]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 13.0
+offset_right = 222.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 14
+text = "Buy"
+
+[node name="Reproducir_12" type="Button" parent="ScrollContainer/VBoxContainer/Caja_Compra_12"]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 13.0
+offset_right = 225.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 14
+text = "Play"
+
+[node name="Caja_Compra_13" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_ay72j")
+
+[node name="Nombre_Cancion" type="Label" parent="ScrollContainer/VBoxContainer/Caja_Compra_13"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 14.0
+offset_right = 115.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 20
+text = "Crimen"
+
+[node name="Precio_13" type="Label" parent="ScrollContainer/VBoxContainer/Caja_Compra_13"]
+layout_mode = 0
+offset_left = 117.0
+offset_top = 15.0
+offset_right = 176.0
+offset_bottom = 39.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 20
+text = "Precio
+"
+
+[node name="Comprar_13" type="Button" parent="ScrollContainer/VBoxContainer/Caja_Compra_13"]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 13.0
+offset_right = 222.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 14
+text = "Buy"
+
+[node name="Reproducir_13" type="Button" parent="ScrollContainer/VBoxContainer/Caja_Compra_13"]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 13.0
+offset_right = 225.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 14
+text = "Play"
+
+[node name="Caja_Compra_14" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_ay72j")
+
+[node name="Nombre_Cancion" type="Label" parent="ScrollContainer/VBoxContainer/Caja_Compra_14"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 14.0
+offset_right = 115.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 20
+text = "Sinestro"
+
+[node name="Precio_14" type="Label" parent="ScrollContainer/VBoxContainer/Caja_Compra_14"]
+layout_mode = 0
+offset_left = 117.0
+offset_top = 15.0
+offset_right = 176.0
+offset_bottom = 39.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 20
+text = "Precio
+"
+
+[node name="Comprar_14" type="Button" parent="ScrollContainer/VBoxContainer/Caja_Compra_14"]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 13.0
+offset_right = 222.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 14
+text = "Buy"
+
+[node name="Reproducir_14" type="Button" parent="ScrollContainer/VBoxContainer/Caja_Compra_14"]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 13.0
+offset_right = 225.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 14
+text = "Play"
+
+[node name="Caja_Compra_15" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_ay72j")
+
+[node name="Nombre_Cancion" type="Label" parent="ScrollContainer/VBoxContainer/Caja_Compra_15"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 14.0
+offset_right = 115.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 20
+text = "Advent"
+
+[node name="Precio_15" type="Label" parent="ScrollContainer/VBoxContainer/Caja_Compra_15"]
+layout_mode = 0
+offset_left = 117.0
+offset_top = 15.0
+offset_right = 176.0
+offset_bottom = 39.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 20
+text = "Precio
+"
+
+[node name="Comprar_15" type="Button" parent="ScrollContainer/VBoxContainer/Caja_Compra_15"]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 13.0
+offset_right = 222.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 14
+text = "Buy"
+
+[node name="Reproducir_15" type="Button" parent="ScrollContainer/VBoxContainer/Caja_Compra_15"]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 13.0
+offset_right = 225.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 14
+text = "Play"
+
+[node name="Caja_Compra_16" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_ay72j")
+
+[node name="Nombre_Cancion" type="Label" parent="ScrollContainer/VBoxContainer/Caja_Compra_16"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 14.0
+offset_right = 115.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 20
+text = "Media"
+
+[node name="Precio_16" type="Label" parent="ScrollContainer/VBoxContainer/Caja_Compra_16"]
+layout_mode = 0
+offset_left = 117.0
+offset_top = 15.0
+offset_right = 176.0
+offset_bottom = 39.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 20
+text = "Precio
+"
+
+[node name="Comprar_16" type="Button" parent="ScrollContainer/VBoxContainer/Caja_Compra_16"]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 13.0
+offset_right = 222.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 14
+text = "Buy"
+
+[node name="Reproducir_16" type="Button" parent="ScrollContainer/VBoxContainer/Caja_Compra_16"]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 13.0
+offset_right = 225.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 14
+text = "Play"
+
+[node name="Caja_Compra_17" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_ay72j")
+
+[node name="Nombre_Cancion" type="Label" parent="ScrollContainer/VBoxContainer/Caja_Compra_17"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 14.0
+offset_right = 115.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 20
+text = "Festival"
+
+[node name="Precio_17" type="Label" parent="ScrollContainer/VBoxContainer/Caja_Compra_17"]
+layout_mode = 0
+offset_left = 117.0
+offset_top = 15.0
+offset_right = 176.0
+offset_bottom = 39.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 20
+text = "Precio
+"
+
+[node name="Comprar_17" type="Button" parent="ScrollContainer/VBoxContainer/Caja_Compra_17"]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 13.0
+offset_right = 222.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 14
+text = "Buy"
+
+[node name="Reproducir_17" type="Button" parent="ScrollContainer/VBoxContainer/Caja_Compra_17"]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 13.0
+offset_right = 225.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 14
+text = "Play"
+
+[node name="Caja_Compra_18" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_ay72j")
+
+[node name="Nombre_Cancion" type="Label" parent="ScrollContainer/VBoxContainer/Caja_Compra_18"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 14.0
+offset_right = 115.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 20
+text = "Progreso"
+
+[node name="Precio_18" type="Label" parent="ScrollContainer/VBoxContainer/Caja_Compra_18"]
+layout_mode = 0
+offset_left = 117.0
+offset_top = 15.0
+offset_right = 176.0
+offset_bottom = 39.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 20
+text = "Precio
+"
+
+[node name="Comprar_18" type="Button" parent="ScrollContainer/VBoxContainer/Caja_Compra_18"]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 13.0
+offset_right = 222.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 14
+text = "Buy"
+
+[node name="Reproducir_18" type="Button" parent="ScrollContainer/VBoxContainer/Caja_Compra_18"]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 13.0
+offset_right = 225.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 14
+text = "Play"
+
+[node name="Caja_Compra_19" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_ay72j")
+
+[node name="Nombre_Cancion" type="Label" parent="ScrollContainer/VBoxContainer/Caja_Compra_19"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 14.0
+offset_right = 115.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 20
+text = "EuMalke"
+
+[node name="Precio_19" type="Label" parent="ScrollContainer/VBoxContainer/Caja_Compra_19"]
+layout_mode = 0
+offset_left = 117.0
+offset_top = 15.0
+offset_right = 176.0
+offset_bottom = 39.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 20
+text = "Precio
+"
+
+[node name="Comprar_19" type="Button" parent="ScrollContainer/VBoxContainer/Caja_Compra_19"]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 13.0
+offset_right = 222.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 14
+text = "Buy"
+
+[node name="Reproducir_19" type="Button" parent="ScrollContainer/VBoxContainer/Caja_Compra_19"]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 13.0
+offset_right = 225.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_c3t5i")
+theme_override_font_sizes/font_size = 14
+text = "Play"
+
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Caja_Compra_1/Reproducir_1" to="." method="_on_reproducir_1_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Caja_Compra_2/Reproducir_2" to="." method="_on_reproducir_2_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Caja_Compra_3/Reproducir_3" to="." method="_on_reproducir_3_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Caja_Compra_11/Comprar_11" to="." method="_on_comprar_11_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Caja_Compra_11/Reproducir_11" to="." method="_on_reproducir_11_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Caja_Compra_4/Comprar_4" to="." method="_on_comprar_4_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Caja_Compra_4/Reproducir_4" to="." method="_on_reproducir_4_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Caja_Compra_5/Comprar_5" to="." method="_on_comprar_5_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Caja_Compra_5/Reproducir_5" to="." method="_on_reproducir_5_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Caja_Compra_6/Comprar_6" to="." method="_on_comprar_6_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Caja_Compra_6/Reproducir_6" to="." method="_on_reproducir_6_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Caja_Compra_7/Comprar_7" to="." method="_on_comprar_7_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Caja_Compra_7/Reproducir_7" to="." method="_on_reproducir_7_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Caja_Compra_8/Comprar_8" to="." method="_on_comprar_8_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Caja_Compra_8/Reproducir_8" to="." method="_on_reproducir_8_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Caja_Compra_9/Comprar_9" to="." method="_on_comprar_9_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Caja_Compra_9/Reproducir_9" to="." method="_on_reproducir_9_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Caja_Compra_10/Comprar_10" to="." method="_on_comprar_10_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Caja_Compra_10/Reproducir_10" to="." method="_on_reproducir_10_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Caja_Compra_12/Comprar_12" to="." method="_on_comprar_12_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Caja_Compra_12/Reproducir_12" to="." method="_on_reproducir_12_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Caja_Compra_13/Comprar_13" to="." method="_on_comprar_13_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Caja_Compra_13/Reproducir_13" to="." method="_on_reproducir_13_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Caja_Compra_14/Comprar_14" to="." method="_on_comprar_14_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Caja_Compra_14/Reproducir_14" to="." method="_on_reproducir_14_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Caja_Compra_15/Comprar_15" to="." method="_on_comprar_15_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Caja_Compra_15/Reproducir_15" to="." method="_on_reproducir_15_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Caja_Compra_16/Comprar_16" to="." method="_on_comprar_16_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Caja_Compra_16/Reproducir_16" to="." method="_on_reproducir_16_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Caja_Compra_17/Comprar_17" to="." method="_on_comprar_17_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Caja_Compra_17/Reproducir_17" to="." method="_on_reproducir_17_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Caja_Compra_18/Comprar_18" to="." method="_on_comprar_18_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Caja_Compra_18/Reproducir_18" to="." method="_on_reproducir_18_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Caja_Compra_19/Comprar_19" to="." method="_on_comprar_19_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Caja_Compra_19/Reproducir_19" to="." method="_on_reproducir_19_pressed"]

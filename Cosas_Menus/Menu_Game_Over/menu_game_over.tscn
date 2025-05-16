@@ -1,0 +1,91 @@
+[gd_scene load_steps=11 format=3 uid="uid://kbj4afeg0jye"]
+
+[ext_resource type="Script" path="res://Cosas_Menus/Menu_Game_Over/menu_game_over.gd" id="1_bjt8u"]
+[ext_resource type="Texture2D" uid="uid://dw0q4lkpww6p8" path="res://Assests/Imagenes/Fondos/digital-art-pixel-art-pixels-pixelated-grave-hd-wallpaper-preview.jpg" id="1_yqh8a"]
+[ext_resource type="Texture2D" uid="uid://di44mqghojxt6" path="res://Assests/Imagenes/Paneles_Y_Botones/Botones/UI_Flat_Button02a_4.png" id="2_bj6m2"]
+[ext_resource type="Texture2D" uid="uid://bukl7mev4xtvd" path="res://Assests/Imagenes/Paneles_Y_Botones/Botones/UI_Flat_Button02a_1.png" id="3_ytow2"]
+[ext_resource type="Texture2D" uid="uid://dr0a7r1b1trv1" path="res://Assests/Imagenes/Paneles_Y_Botones/Botones/UI_Flat_Button02a_3.png" id="4_um2ph"]
+[ext_resource type="FontFile" uid="uid://dfffu801f73p7" path="res://Assests/Tipos_de_Letra/MedievalSharp-Regular.ttf" id="5_do0ct"]
+[ext_resource type="Texture2D" uid="uid://mhfgq0v3vur7" path="res://Assests/Imagenes/Fondos/cde80ad767e60412ea28ea864b495c92-removebg-preview.png" id="6_8dufr"]
+[ext_resource type="Script" path="res://Cosas_Menus/Menu_Game_Over/re_intentar.gd" id="6_uhmtm"]
+[ext_resource type="Script" path="res://Cosas_Menus/Menu_Game_Over/rendirse.gd" id="8_5uae3"]
+[ext_resource type="AudioStream" uid="uid://dr71hqh8288hp" path="res://Assests/Musicas/Me muero.mp3" id="10_uoqrc"]
+
+[node name="Menu_Game_Over" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 656.0
+script = ExtResource("1_bjt8u")
+
+[node name="Fondo" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_yqh8a")
+expand_mode = 3
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 384.0
+offset_right = 744.0
+offset_bottom = 360.0
+texture = ExtResource("6_8dufr")
+
+[node name="ReIntentar" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 480.0
+offset_top = 392.0
+offset_right = 672.0
+offset_bottom = 440.0
+texture_normal = ExtResource("2_bj6m2")
+texture_pressed = ExtResource("3_ytow2")
+texture_hover = ExtResource("4_um2ph")
+stretch_mode = 0
+script = ExtResource("6_uhmtm")
+
+[node name="Label" type="Label" parent="ReIntentar"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 3.0
+offset_right = 181.0
+offset_bottom = 37.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_do0ct")
+theme_override_font_sizes/font_size = 30
+text = "REINTENTAR"
+
+[node name="Rendirse" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 480.0
+offset_top = 504.0
+offset_right = 672.0
+offset_bottom = 552.0
+texture_normal = ExtResource("2_bj6m2")
+texture_pressed = ExtResource("3_ytow2")
+texture_hover = ExtResource("4_um2ph")
+stretch_mode = 0
+script = ExtResource("8_5uae3")
+
+[node name="Label" type="Label" parent="Rendirse"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 6.0
+offset_right = 159.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_do0ct")
+theme_override_font_sizes/font_size = 30
+text = "RENDIRSE"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_uoqrc")
+parameters/looping = true
+
+[connection signal="pressed" from="ReIntentar" to="." method="_on_re_intentar_pressed"]
+[connection signal="pressed" from="Rendirse" to="." method="_on_rendirse_pressed"]

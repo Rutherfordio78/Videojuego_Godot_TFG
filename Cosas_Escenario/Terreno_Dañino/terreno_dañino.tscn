@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5h5xcy80bcwp"]
+
+[ext_resource type="Script" path="res://Cosas_Escenario/Terreno_Dañino/terreno_dañino.gd" id="1_8cf7e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bnqh8"]
+size = Vector2(192, 20)
+
+[node name="Terreno_Dañino" type="Area2D"]
+script = ExtResource("1_8cf7e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(96, 0)
+shape = SubResource("RectangleShape2D_bnqh8")

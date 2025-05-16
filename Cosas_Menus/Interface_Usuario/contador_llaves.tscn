@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3vscqa15uxu5"]
+
+[ext_resource type="Texture2D" uid="uid://dp7xmd2s6l5sx" path="res://Assests/Imagenes/Interface_Usuario/Contador_Llaves/1.png" id="1_600vr"]
+[ext_resource type="Script" path="res://Cosas_Menus/Interface_Usuario/contador_llaves.gd" id="1_j2qte"]
+[ext_resource type="FontFile" uid="uid://dfffu801f73p7" path="res://Assests/Tipos_de_Letra/MedievalSharp-Regular.ttf" id="2_850a4"]
+
+[node name="Contador_Llaves" type="Control"]
+z_index = 25
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j2qte")
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 82.0
+offset_bottom = 32.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel2"]
+position = Vector2(16, 15)
+scale = Vector2(1.75, 1.75)
+texture = ExtResource("1_600vr")
+
+[node name="Label" type="Label" parent="Panel2"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 4.0
+offset_right = 78.0
+offset_bottom = 30.0
+theme_override_fonts/font = ExtResource("2_850a4")
+theme_override_font_sizes/font_size = 22
+text = "10"
+horizontal_alignment = 1
+vertical_alignment = 1

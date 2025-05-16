@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c3re884j7yurt"
+path="res://.godot/imported/Castillo (1).mp3-7f7da7eb4a8703cc025204d2786e1f4b.mp3str"
+
+[deps]
+
+source_file="res://Assests/Musicas/Castillo (1).mp3"
+dest_files=["res://.godot/imported/Castillo (1).mp3-7f7da7eb4a8703cc025204d2786e1f4b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

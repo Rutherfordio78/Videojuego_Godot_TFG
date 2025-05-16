@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://vhcgrr4w0qbn"]
+
+[ext_resource type="Texture2D" uid="uid://0pmdd7n4ls3g" path="res://Assests/Imagenes/Castillo/Opcion_2/layer_1.png" id="1_eog8s"]
+[ext_resource type="Texture2D" uid="uid://01vwpy7nlbou" path="res://Assests/Imagenes/Castillo/Opcion_2/layer_2.png" id="2_irikj"]
+[ext_resource type="Texture2D" uid="uid://cgp8qf1ap8gqn" path="res://Assests/Imagenes/Castillo/Opcion_2/layer_3.png" id="3_5e0vq"]
+
+[node name="Fondo_Castillo_Paralax_1" type="Node2D"]
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.6, 1)
+repeat_size = Vector2(704, 0)
+repeat_times = 4
+
+[node name="Layer1" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(112, 88)
+scale = Vector2(2.2, 2.13333)
+texture = ExtResource("1_eog8s")
+
+[node name="Parallax2D2" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.8, 1)
+repeat_size = Vector2(704, 0)
+repeat_times = 4
+
+[node name="Layer2" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(112, 136)
+scale = Vector2(2.2, 2.1374)
+texture = ExtResource("2_irikj")
+
+[node name="Parallax2D3" type="Parallax2D" parent="."]
+repeat_size = Vector2(704, 0)
+repeat_times = 4
+
+[node name="Layer3" type="Sprite2D" parent="Parallax2D3"]
+position = Vector2(112, 248)
+scale = Vector2(2.2, 2.13334)
+texture = ExtResource("3_5e0vq")

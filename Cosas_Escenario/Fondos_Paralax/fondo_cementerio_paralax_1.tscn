@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://yfthmgtk6kgp"]
+
+[ext_resource type="Texture2D" uid="uid://bsxdo4ngdvy4w" path="res://Assests/Imagenes/Cementerio/Opcion_2/Background_0.png" id="1_8nl60"]
+[ext_resource type="Texture2D" uid="uid://dy51r0o8by7r7" path="res://Assests/Imagenes/Cementerio/Opcion_2/Background_1.png" id="2_3ymu8"]
+[ext_resource type="Texture2D" uid="uid://hdfan61h2022" path="res://Assests/Imagenes/Cementerio/Opcion_2/Grass_background_1.png" id="3_6v6lp"]
+[ext_resource type="Texture2D" uid="uid://ccormfppdlttw" path="res://Assests/Imagenes/Cementerio/Opcion_2/Grass_background_2.png" id="4_5cg4j"]
+
+[node name="Fondo_cementerio_paralax_1" type="Node2D"]
+position = Vector2(0, 224)
+scale = Vector2(2, 2)
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.4, 1)
+repeat_size = Vector2(1230, 0)
+repeat_times = 15
+
+[node name="Background0" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(408, 3.99999)
+scale = Vector2(1.6, 1.6)
+texture = ExtResource("1_8nl60")
+
+[node name="Parallax2D2" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.6, 1)
+repeat_size = Vector2(306, 0)
+repeat_times = 15
+
+[node name="Background1" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(332, 228)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_3ymu8")
+
+[node name="Parallax2D3" type="Parallax2D" parent="."]
+scale = Vector2(0.5, 0.5)
+scroll_scale = Vector2(0.8, 1)
+scroll_offset = Vector2(194.667, -13.3333)
+repeat_size = Vector2(703, 0)
+repeat_times = 25
+
+[node name="GrassBackground1" type="Sprite2D" parent="Parallax2D3"]
+position = Vector2(847.41, 497.524)
+texture = ExtResource("3_6v6lp")
+
+[node name="GrassBackground2" type="Sprite2D" parent="Parallax2D3"]
+position = Vector2(1198.52, 497.524)
+texture = ExtResource("4_5cg4j")

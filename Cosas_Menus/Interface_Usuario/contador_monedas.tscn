@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://cw2y8tq332au0"]
+
+[ext_resource type="Script" path="res://Cosas_Menus/Interface_Usuario/contador_monedas.gd" id="1_og6da"]
+[ext_resource type="Texture2D" uid="uid://c4q8w5w7i6nrx" path="res://Assests/Imagenes/Interface_Usuario/Contador_Monedas/01.png" id="1_om4ii"]
+[ext_resource type="FontFile" uid="uid://dfffu801f73p7" path="res://Assests/Tipos_de_Letra/MedievalSharp-Regular.ttf" id="2_1bnv4"]
+
+[node name="Contador_Monedas" type="Control"]
+z_index = 25
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_og6da")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 88.0
+offset_bottom = 32.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel"]
+position = Vector2(12, 15)
+scale = Vector2(1.75, 1.75)
+texture = ExtResource("1_om4ii")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 4.0
+offset_right = 86.0
+offset_bottom = 30.0
+theme_override_fonts/font = ExtResource("2_1bnv4")
+theme_override_font_sizes/font_size = 22
+text = "10"
+horizontal_alignment = 1
+vertical_alignment = 1

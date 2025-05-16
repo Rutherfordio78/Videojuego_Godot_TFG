@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dr71hqh8288hp"
+path="res://.godot/imported/Me muero.mp3-d97a99d4e2cfddfca9f1c01a23d296bd.mp3str"
+
+[deps]
+
+source_file="res://Assests/Musicas/Me muero.mp3"
+dest_files=["res://.godot/imported/Me muero.mp3-d97a99d4e2cfddfca9f1c01a23d296bd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

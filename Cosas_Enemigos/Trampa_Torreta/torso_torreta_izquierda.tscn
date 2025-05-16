@@ -1,0 +1,290 @@
+[gd_scene load_steps=18 format=3 uid="uid://k7yijvnsatkt"]
+
+[ext_resource type="Script" path="res://Cosas_Enemigos/Trampa_Torreta/torso_torreta_izquierda.gd" id="1_e2tqw"]
+[ext_resource type="Texture2D" uid="uid://cvj8vs0xky4s2" path="res://Assests/Imagenes/Trampa_Torreta/Idle 2/1.png" id="2_g6456"]
+[ext_resource type="Texture2D" uid="uid://c62nbqjdwxmn7" path="res://Assests/Imagenes/Trampa_Torreta/Attack 2/2.png" id="2_mbxmv"]
+[ext_resource type="Texture2D" uid="uid://c0164ieolwryo" path="res://Assests/Imagenes/Trampa_Torreta/Attack 2/1.png" id="3_gy48o"]
+[ext_resource type="Texture2D" uid="uid://li6rnoejl0cd" path="res://Assests/Imagenes/Trampa_Torreta/Attack 2/3.png" id="4_m0oxu"]
+[ext_resource type="Texture2D" uid="uid://dy2n4yixkfuxu" path="res://Assests/Imagenes/Trampa_Torreta/Attack 2/4.png" id="5_25mn7"]
+[ext_resource type="Texture2D" uid="uid://db8kif0w4tj47" path="res://Assests/Imagenes/Trampa_Torreta/Attack 2/5.png" id="6_jkx8w"]
+[ext_resource type="Texture2D" uid="uid://o1dlfd51sadh" path="res://Assests/Imagenes/Trampa_Torreta/Attack 2/6.png" id="7_hcn2l"]
+[ext_resource type="Texture2D" uid="uid://ddeog3gxvuwnu" path="res://Assests/Imagenes/Trampa_Torreta/Destroyed/2.png" id="8_clide"]
+[ext_resource type="AudioStream" uid="uid://c7honteqnrfr8" path="res://Assests/Efectos_de_Sonido/Disparo_Trampa.mp3" id="10_8qj28"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pytuq"]
+size = Vector2(21, 22.3846)
+
+[sub_resource type="Animation" id="Animation_1b75y"]
+resource_name = "Disparar"
+length = 0.200003
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("animaciones2/Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.0666667, 0.1, 0.133333, 0.166667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("3_gy48o"), ExtResource("2_mbxmv"), ExtResource("4_m0oxu"), ExtResource("5_25mn7"), ExtResource("6_jkx8w"), ExtResource("7_hcn2l")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("animaciones2/Sprite2D:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("animaciones2/Sprite2D:hframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("animaciones2/Sprite2D:vframes")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("animaciones2/Sprite2D:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.0666667, 0.1, 0.133333, 0.166667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 0, 0, 0, 0, 0]
+}
+
+[sub_resource type="Animation" id="Animation_k34c6"]
+resource_name = "Herido"
+length = 0.0333367
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("animaciones2/Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("8_clide")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("animaciones2/Sprite2D:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("animaciones2/Sprite2D:hframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("animaciones2/Sprite2D:vframes")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("animaciones2/Sprite2D:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_6hjfu"]
+resource_name = "Idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("animaciones2/Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_g6456")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("animaciones2/Sprite2D:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("animaciones2/Sprite2D:hframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("animaciones2/Sprite2D:vframes")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("animaciones2/Sprite2D:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_84e7t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("animaciones2/Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_mbxmv")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("animaciones2/Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nf6gf"]
+_data = {
+"Disparar": SubResource("Animation_1b75y"),
+"Herido": SubResource("Animation_k34c6"),
+"Idle": SubResource("Animation_6hjfu"),
+"RESET": SubResource("Animation_84e7t")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bnwl1"]
+size = Vector2(17, 16)
+
+[node name="Torso_Torreta_Izquierda" type="RigidBody2D"]
+collision_layer = 524288
+collision_mask = 524289
+script = ExtResource("1_e2tqw")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(2.5, 7.55)
+scale = Vector2(1.3, 1.3)
+shape = SubResource("RectangleShape2D_pytuq")
+
+[node name="animaciones2" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="animaciones2"]
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("2_mbxmv")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="animaciones2"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_nf6gf")
+}
+autoplay = "Idle"
+
+[node name="Area2D2" type="Area2D" parent="."]
+collision_layer = 2097152
+collision_mask = 1024
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+modulate = Color(0.97, 0, 0.420333, 1)
+position = Vector2(3, 7)
+scale = Vector2(1.3, 1.3)
+shape = SubResource("RectangleShape2D_bnwl1")
+
+[node name="RayCast2D2" type="RayCast2D" parent="."]
+position = Vector2(0, 8)
+target_position = Vector2(-384, 0)
+collision_mask = 512
+collide_with_areas = true
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_8qj28")
+
+[node name="Marker2D2" type="Marker2D" parent="."]
+position = Vector2(-15, 13)

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bfv4jabt77ws6"
+path="res://.godot/imported/Caperucita_Golpe_Fuerte (mp3cut.net).mp3-da89e65b9d2106e5f86e4cf3677b486d.mp3str"
+
+[deps]
+
+source_file="res://Assests/Efectos_de_Sonido/Caperucita_Golpe_Fuerte (mp3cut.net).mp3"
+dest_files=["res://.godot/imported/Caperucita_Golpe_Fuerte (mp3cut.net).mp3-da89e65b9d2106e5f86e4cf3677b486d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

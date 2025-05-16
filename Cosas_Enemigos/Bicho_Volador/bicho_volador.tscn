@@ -1,0 +1,123 @@
+[gd_scene load_steps=16 format=3 uid="uid://fynvlu5fsn6b"]
+
+[ext_resource type="Script" path="res://Cosas_Enemigos/Bicho_Volador/bicho_volador.gd" id="1_5umhb"]
+[ext_resource type="Texture2D" uid="uid://bhom3tici24xf" path="res://Assests/Imagenes/Enemigos/Bicho_Volador/spritesheet.png" id="1_rihhh"]
+[ext_resource type="AudioStream" uid="uid://pt30jb1ml1" path="res://Assests/Efectos_de_Sonido/bugs_ready-83750.mp3" id="3_dx6lt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gfnlf"]
+atlas = ExtResource("1_rihhh")
+region = Rect2(0, 0, 83, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hox6f"]
+atlas = ExtResource("1_rihhh")
+region = Rect2(83, 0, 83, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iy8pw"]
+atlas = ExtResource("1_rihhh")
+region = Rect2(166, 0, 83, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pyww8"]
+atlas = ExtResource("1_rihhh")
+region = Rect2(249, 0, 83, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ih31t"]
+atlas = ExtResource("1_rihhh")
+region = Rect2(332, 0, 83, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1xqhu"]
+atlas = ExtResource("1_rihhh")
+region = Rect2(415, 0, 83, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_07hsi"]
+atlas = ExtResource("1_rihhh")
+region = Rect2(498, 0, 83, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6o65p"]
+atlas = ExtResource("1_rihhh")
+region = Rect2(581, 0, 83, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cjkav"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gfnlf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hox6f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iy8pw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pyww8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ih31t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1xqhu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_07hsi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6o65p")
+}],
+"loop": true,
+"name": &"Volar",
+"speed": 20.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wikvo"]
+radius = 14.0
+height = 36.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fx6f6"]
+radius = 15.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rwtvw"]
+radius = 11.0
+
+[node name="Bicho_Volador" type="CharacterBody2D"]
+collision_layer = 524288
+motion_mode = 1
+script = ExtResource("1_5umhb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_cjkav")
+animation = &"Volar"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 8)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_wikvo")
+
+[node name="Area_Herido" type="Area2D" parent="."]
+collision_layer = 2097152
+collision_mask = 1024
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area_Herido"]
+modulate = Color(0.29, 0.2262, 0.0348, 1)
+position = Vector2(0, 8)
+shape = SubResource("CircleShape2D_fx6f6")
+debug_color = Color(0.866238, 0.000564285, 0.859876, 0.42)
+
+[node name="Area_Ataque" type="Area2D" parent="."]
+collision_layer = 1048576
+collision_mask = 2048
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area_Ataque"]
+position = Vector2(0, 8)
+shape = SubResource("CircleShape2D_rwtvw")
+debug_color = Color(0.495086, 0.525765, 0.681484, 0.42)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_dx6lt")
+volume_db = 15.0
+parameters/looping = true
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+target_desired_distance = 20.0
+avoidance_enabled = true
+
+[connection signal="velocity_computed" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_velocity_computed"]

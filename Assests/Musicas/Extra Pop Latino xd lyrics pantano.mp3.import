@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cdxkqwxufdnlo"
+path="res://.godot/imported/Extra Pop Latino xd lyrics pantano.mp3-f1e16bb41a7c5c6e54c31cb72742fb47.mp3str"
+
+[deps]
+
+source_file="res://Assests/Musicas/Extra Pop Latino xd lyrics pantano.mp3"
+dest_files=["res://.godot/imported/Extra Pop Latino xd lyrics pantano.mp3-f1e16bb41a7c5c6e54c31cb72742fb47.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

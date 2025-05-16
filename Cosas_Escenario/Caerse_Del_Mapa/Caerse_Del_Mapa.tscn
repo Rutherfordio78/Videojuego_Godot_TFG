@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dy0qd64dolmyx"]
+
+[ext_resource type="Script" path="res://Cosas_Escenario/Caerse_Del_Mapa/Caerse_Del_Mapa.gd" id="1_sctb5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m54me"]
+size = Vector2(11464, 202)
+
+[node name="Caerse_Del_Mapa" type="Area2D"]
+collision_layer = 0
+collision_mask = 512
+script = ExtResource("1_sctb5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1668, 291)
+shape = SubResource("RectangleShape2D_m54me")

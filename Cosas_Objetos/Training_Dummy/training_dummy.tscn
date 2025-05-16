@@ -1,0 +1,73 @@
+[gd_scene load_steps=10 format=3 uid="uid://cqdhd74cgpgws"]
+
+[ext_resource type="Texture2D" uid="uid://ctdwvbplmca3b" path="res://Assests/Imagenes/Training_Dummy/NoArmor/Hited/Hited(NoArmor)1.png" id="1_623su"]
+[ext_resource type="Script" path="res://Cosas_Objetos/Training_Dummy/training_dummy.gd" id="1_dfi7u"]
+[ext_resource type="Texture2D" uid="uid://x4h3j6w6okh3" path="res://Assests/Imagenes/Training_Dummy/NoArmor/Hited/Hited(NoArmor)2.png" id="2_kudd5"]
+[ext_resource type="Texture2D" uid="uid://bqk76me8ek711" path="res://Assests/Imagenes/Training_Dummy/NoArmor/Hited/Hited(NoArmor)3.png" id="3_b6mu3"]
+[ext_resource type="Texture2D" uid="uid://c8vk2sf3ts1mv" path="res://Assests/Imagenes/Training_Dummy/NoArmor/Hited/Hited(NoArmor)4.png" id="4_spbrl"]
+[ext_resource type="Texture2D" uid="uid://ckhkwujrvxjq7" path="res://Assests/Imagenes/Training_Dummy/NoArmor/Hited/Hited(NoArmor)5.png" id="5_ncwy4"]
+[ext_resource type="Texture2D" uid="uid://bdvg6ve57fopy" path="res://Assests/Imagenes/Training_Dummy/NoArmor/Idle/Idle(NoArmor).png" id="6_mtyf3"]
+[ext_resource type="AudioStream" uid="uid://qdurmbyh1tqa" path="res://Assests/Efectos_de_Sonido/Dummy_Hit (mp3cut.net).mp3" id="7_aqyxw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e224h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_623su")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_kudd5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_b6mu3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_spbrl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ncwy4")
+}],
+"loop": false,
+"name": &"Golpeado",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_mtyf3")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[node name="Training_Dummy" type="RigidBody2D"]
+collision_layer = 0
+script = ExtResource("1_dfi7u")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -24)
+scale = Vector2(1.4, 1.4)
+sprite_frames = SubResource("SpriteFrames_e224h")
+animation = &"Golpeado"
+autoplay = "Idle"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(2, 10)
+scale = Vector2(1.4, 1.4)
+polygon = PackedVector2Array(-8, 0, 8, 0, 8, -8, 8, -16, 16, -16, 16, -24, 8, -24, 8, -32, 0, -32, -8, -32, -8, -24, -16, -24, -16, -16, -8, -16, -8, -8)
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2097152
+collision_mask = 1024
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2(2, 10)
+scale = Vector2(1.4, 1.4)
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, -8, 8, -16, 8, -24, 8, -32, -8, -32, -8, -24, -8, -16, -8, -8)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_aqyxw")
+volume_db = 12.0
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(0, -32)

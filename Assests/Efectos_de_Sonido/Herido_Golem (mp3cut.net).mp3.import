@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b4lt0ksyc1gwd"
+path="res://.godot/imported/Herido_Golem (mp3cut.net).mp3-aec3319cd8f5f9ec6378c655fe4cddac.mp3str"
+
+[deps]
+
+source_file="res://Assests/Efectos_de_Sonido/Herido_Golem (mp3cut.net).mp3"
+dest_files=["res://.godot/imported/Herido_Golem (mp3cut.net).mp3-aec3319cd8f5f9ec6378c655fe4cddac.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

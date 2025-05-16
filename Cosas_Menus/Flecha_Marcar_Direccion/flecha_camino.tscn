@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://du6cfav0wmara"]
+
+[ext_resource type="Texture2D" uid="uid://50rfljn216u5" path="res://Assests/Imagenes/Paneles_Y_Botones/Botones/UI_Flat_IconArrow01a.png" id="1_7c1a4"]
+[ext_resource type="Script" path="res://Cosas_Menus/Flecha_Marcar_Direccion/flecha_camino.gd" id="2_gwcmm"]
+
+[node name="Flecha_Camino" type="Sprite2D"]
+rotation = 1.5708
+scale = Vector2(2, 2)
+texture = ExtResource("1_7c1a4")
+script = ExtResource("2_gwcmm")

@@ -1,0 +1,186 @@
+[gd_scene load_steps=37 format=3 uid="uid://24rja5e1tjil"]
+
+[ext_resource type="Texture2D" uid="uid://br33ec2g2a16x" path="res://Assests/Imagenes/Objetos/Cofre/Sin_Abrir/Broken1.png" id="1_080ab"]
+[ext_resource type="Script" path="res://Cosas_Objetos/Cofre/cofre.gd" id="1_rasad"]
+[ext_resource type="Texture2D" uid="uid://cfj238n734wty" path="res://Assests/Imagenes/Objetos/Cofre/Con_Recompensa/Open(GoldLoot)1.png" id="1_tvt0l"]
+[ext_resource type="Texture2D" uid="uid://cf3q0h77yp172" path="res://Assests/Imagenes/Objetos/Cofre/Con_Recompensa/Open(GoldLoot)2.png" id="2_po23v"]
+[ext_resource type="Texture2D" uid="uid://dcoka88ts4yk6" path="res://Assests/Imagenes/Objetos/Cofre/Sin_Abrir/Broken2.png" id="2_suer4"]
+[ext_resource type="Texture2D" uid="uid://dptjje2fbvsn7" path="res://Assests/Imagenes/Objetos/Cofre/Sin_Abrir/Broken3.png" id="3_ekpvr"]
+[ext_resource type="Texture2D" uid="uid://b3fo5obmbbo10" path="res://Assests/Imagenes/Objetos/Cofre/Con_Recompensa/Open(GoldLoot)3.png" id="3_j10gi"]
+[ext_resource type="Texture2D" uid="uid://y857gg81l52f" path="res://Assests/Imagenes/Objetos/Cofre/Sin_Abrir/Broken4.png" id="4_g456o"]
+[ext_resource type="Texture2D" uid="uid://14cvge7s2nf7" path="res://Assests/Imagenes/Objetos/Cofre/Con_Recompensa/Open(GoldLoot)4.png" id="4_v13s3"]
+[ext_resource type="Texture2D" uid="uid://vil2bh3kyj38" path="res://Assests/Imagenes/Objetos/Cofre/Sin_Abrir/Broken5.png" id="5_5wi4y"]
+[ext_resource type="Texture2D" uid="uid://coytjvma3533u" path="res://Assests/Imagenes/Objetos/Cofre/Con_Recompensa/Open(GoldLoot)5.png" id="5_c41o3"]
+[ext_resource type="Texture2D" uid="uid://df0mo2r86r1ow" path="res://Assests/Imagenes/Objetos/Cofre/Sin_Abrir/Broken6.png" id="6_5w8pa"]
+[ext_resource type="Texture2D" uid="uid://c7g3u3d11gkhd" path="res://Assests/Imagenes/Objetos/Cofre/Con_Recompensa/Open(GoldLoot)6.png" id="6_d6n0c"]
+[ext_resource type="Texture2D" uid="uid://m4scqvlqfnxw" path="res://Assests/Imagenes/Objetos/Cofre/Con_Recompensa/Open(GoldLoot)7.png" id="7_ojwd1"]
+[ext_resource type="Texture2D" uid="uid://bsoy3133tatg8" path="res://Assests/Imagenes/Objetos/Cofre/Con_Recompensa/Open(GoldLoot)8.png" id="8_btwp1"]
+[ext_resource type="Texture2D" uid="uid://la4pg742hxpe" path="res://Assests/Imagenes/Objetos/Cofre/Con_Recompensa/Open(GoldLoot)9.png" id="9_fjclb"]
+[ext_resource type="Texture2D" uid="uid://duok66vlegh22" path="res://Assests/Imagenes/Objetos/Cofre/Con_Recompensa/Open(GoldLoot)10.png" id="10_cmyoc"]
+[ext_resource type="Texture2D" uid="uid://cna4mndl0wgwc" path="res://Assests/Imagenes/Objetos/Cofre/Con_Recompensa/Open(GoldLoot)11.png" id="11_66p8u"]
+[ext_resource type="Texture2D" uid="uid://or4rc3jptl42" path="res://Assests/Imagenes/Objetos/Cofre/Con_Recompensa/Open(GoldLoot)12.png" id="12_nro0q"]
+[ext_resource type="Texture2D" uid="uid://xot1knq2yor" path="res://Assests/Imagenes/Objetos/Cofre/Con_Recompensa/Open(GoldLoot)13.png" id="13_hw174"]
+[ext_resource type="Texture2D" uid="uid://dcgjjj6qhay4m" path="res://Assests/Imagenes/Objetos/Cofre/Con_Recompensa/Open(GoldLoot)14.png" id="14_w0eou"]
+[ext_resource type="Texture2D" uid="uid://dqgg0xyebxqmu" path="res://Assests/Imagenes/Objetos/Cofre/Con_Recompensa/Open(GoldLoot)15.png" id="15_vym54"]
+[ext_resource type="Texture2D" uid="uid://c2bwh8t5myh4d" path="res://Assests/Imagenes/Objetos/Cofre/Con_Recompensa/Open(GoldLoot)16.png" id="16_ilitf"]
+[ext_resource type="Texture2D" uid="uid://dhjkk1m0y5r5t" path="res://Assests/Imagenes/Objetos/Cofre/Sin_Recompensa/Open(DustFX)1.png" id="17_0erlm"]
+[ext_resource type="Texture2D" uid="uid://ddyi6gquvwgdy" path="res://Assests/Imagenes/Objetos/Cofre/ChestOpen.png" id="18_7unl3"]
+[ext_resource type="Texture2D" uid="uid://cup8ib2th70lw" path="res://Assests/Imagenes/Objetos/Cofre/Sin_Recompensa/Open(DustFX)2.png" id="18_ksgv6"]
+[ext_resource type="Texture2D" uid="uid://cu5neve4gkj70" path="res://Assests/Imagenes/Objetos/Cofre/Sin_Recompensa/Open(DustFX)3.png" id="19_a47ec"]
+[ext_resource type="Texture2D" uid="uid://cresa3nfsnd8i" path="res://Assests/Imagenes/Objetos/Cofre/Sin_Recompensa/Open(DustFX)4.png" id="20_mtjey"]
+[ext_resource type="Texture2D" uid="uid://dn2s30b8dsw4m" path="res://Assests/Imagenes/Objetos/Cofre/Sin_Recompensa/Open(DustFX)5.png" id="21_uiolq"]
+[ext_resource type="Texture2D" uid="uid://bk6v85y4415wp" path="res://Assests/Imagenes/Objetos/Cofre/Sin_Recompensa/Open(DustFX)6.png" id="22_45338"]
+[ext_resource type="Texture2D" uid="uid://bmdhixm261bnv" path="res://Assests/Imagenes/Objetos/Cofre/Sin_Recompensa/Open(DustFX)7.png" id="23_va45x"]
+[ext_resource type="Texture2D" uid="uid://drtq2scg085cj" path="res://Assests/Imagenes/Objetos/Cofre/Sin_Recompensa/Open(DustFX)8.png" id="24_yue2m"]
+[ext_resource type="Texture2D" uid="uid://ctla5yhjwog5r" path="res://Assests/Imagenes/Objetos/Cofre/Sin_Recompensa/Open(DustFX)9.png" id="25_oo6hi"]
+[ext_resource type="Texture2D" uid="uid://bum5t76c0so5x" path="res://Assests/Imagenes/Objetos/Cofre/Sin_Recompensa/Open(DustFX)10.png" id="26_ypu5s"]
+[ext_resource type="AudioStream" uid="uid://dm4wy2xvltftx" path="res://Assests/Efectos_de_Sonido/Cofre_Abriendose.mp3" id="34_s8sam"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yrwew"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_tvt0l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_po23v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_j10gi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_v13s3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_c41o3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_d6n0c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ojwd1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_btwp1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_fjclb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_cmyoc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_66p8u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_nro0q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_hw174")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_w0eou")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_vym54")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ilitf")
+}],
+"loop": false,
+"name": &"Abierto_Especial",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_0erlm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ksgv6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_a47ec")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_mtjey")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_uiolq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_45338")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_va45x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_yue2m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_oo6hi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_ypu5s")
+}],
+"loop": false,
+"name": &"Abierto_Normal",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_7unl3")
+}],
+"loop": true,
+"name": &"Cofre_Ya_Abierto",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_080ab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_suer4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ekpvr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_g456o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5wi4y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_5w8pa")
+}],
+"loop": true,
+"name": &"Sin_Abrir",
+"speed": 8.0
+}]
+
+[node name="Cofre" type="RigidBody2D"]
+collision_layer = 16
+collision_mask = 3
+script = ExtResource("1_rasad")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_yrwew")
+animation = &"Sin_Abrir"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, 8)
+scale = Vector2(1.2, 1.2)
+polygon = PackedVector2Array(-8, 8, -8, -8, 8, -8, 8, 8)
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 512
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+scale = Vector2(1.2, 1.2)
+polygon = PackedVector2Array(-8, 0, 8, 0, 8, 16, -8, 16)
+
+[node name="Abrir_Cofre" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("34_s8sam")
+volume_db = 10.0

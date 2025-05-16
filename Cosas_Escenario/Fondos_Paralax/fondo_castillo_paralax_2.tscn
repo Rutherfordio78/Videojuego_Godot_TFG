@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://mplxf8g3x2pj"]
+
+[ext_resource type="Texture2D" uid="uid://ds80yeixv31kq" path="res://Assests/Imagenes/Castillo/Opcion_3/Background/01 background.png" id="1_3j52y"]
+[ext_resource type="Texture2D" uid="uid://ck3gb1qkdgocq" path="res://Assests/Imagenes/Castillo/Opcion_3/Background/02 background.png" id="2_sbxvg"]
+[ext_resource type="Texture2D" uid="uid://dr6foqrkf647w" path="res://Assests/Imagenes/Castillo/Opcion_3/Background/03 background A.png" id="3_jlqu7"]
+[ext_resource type="Texture2D" uid="uid://cgxcxed5w10m8" path="res://Assests/Imagenes/Castillo/Opcion_3/Background/03 background B.png" id="4_uniec"]
+[ext_resource type="Texture2D" uid="uid://d3am421tsu65u" path="res://Assests/Imagenes/Castillo/Opcion_3/Background/04 background.png" id="5_kl6dr"]
+[ext_resource type="Texture2D" uid="uid://g1afoq2s4ik8" path="res://Assests/Imagenes/Castillo/Opcion_3/Background/05 background.png" id="6_pv3vq"]
+
+[node name="Fondo_Castillo_Paralax_2" type="Node2D"]
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+
+[node name="01Background" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(216, 192)
+scale = Vector2(1.01408, 1)
+texture = ExtResource("1_3j52y")
+
+[node name="Parallax2D2" type="Parallax2D" parent="."]
+
+[node name="02Background" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(216, 192)
+scale = Vector2(1.01408, 1)
+texture = ExtResource("2_sbxvg")
+
+[node name="Parallax2D3" type="Parallax2D" parent="."]
+
+[node name="03BackgroundA" type="Sprite2D" parent="Parallax2D3"]
+position = Vector2(216, 192)
+scale = Vector2(1.01408, 1)
+texture = ExtResource("3_jlqu7")
+
+[node name="Parallax2D4" type="Parallax2D" parent="."]
+
+[node name="03BackgroundB" type="Sprite2D" parent="Parallax2D4"]
+position = Vector2(216, 192)
+scale = Vector2(1.01408, 1)
+texture = ExtResource("4_uniec")
+
+[node name="Parallax2D5" type="Parallax2D" parent="."]
+
+[node name="04Background" type="Sprite2D" parent="Parallax2D5"]
+position = Vector2(216, 192)
+scale = Vector2(1.01408, 1)
+texture = ExtResource("5_kl6dr")
+
+[node name="Parallax2D6" type="Parallax2D" parent="."]
+
+[node name="05Background" type="Sprite2D" parent="Parallax2D6"]
+position = Vector2(216, 192)
+scale = Vector2(1.01408, 1)
+texture = ExtResource("6_pv3vq")

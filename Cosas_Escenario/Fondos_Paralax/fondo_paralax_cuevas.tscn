@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://r45hekm5dtw2"]
+
+[ext_resource type="Texture2D" uid="uid://mhqxd1k0r5m6" path="res://Assests/Imagenes/Cuevas/background.png" id="1_7snew"]
+[ext_resource type="Texture2D" uid="uid://c1gce8onppg2y" path="res://Assests/Imagenes/Cuevas/back-walls.png" id="2_ypmx1"]
+
+[node name="Fondo_Paralax_Cuevas" type="Node2D"]
+scale = Vector2(1.4, 1.4)
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.8, 1)
+repeat_size = Vector2(1150, 0)
+repeat_times = 2
+
+[node name="Background" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(576, 324)
+scale = Vector2(6, 2.25)
+texture = ExtResource("1_7snew")
+
+[node name="Parallax2D2" type="Parallax2D" parent="."]
+scroll_scale = Vector2(1.1, 1)
+repeat_size = Vector2(1150, 0)
+repeat_times = 2
+
+[node name="Back-walls" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(576, 324)
+scale = Vector2(2.25, 2.25)
+texture = ExtResource("2_ypmx1")

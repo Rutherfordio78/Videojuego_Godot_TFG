@@ -1,0 +1,110 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Angel Request"
+run/main_scene="res://Cosas_Menus/Main_Menu/Main_Menu.tscn"
+config/features=PackedStringArray("4.3", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*res://Global.gd"
+EstadisticasPlayer="*res://Estadisticas_Player.gd"
+
+[display]
+
+window/stretch/mode="canvas_items"
+
+[global_group]
+
+player="Los Jugadores"
+bosses=""
+
+[input]
+
+Barra_de_Espacio={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":32,"key_label":0,"unicode":32,"location":0,"echo":false,"script":null)
+]
+}
+Z={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":90,"key_label":0,"unicode":122,"location":0,"echo":false,"script":null)
+]
+}
+X={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":88,"key_label":0,"unicode":120,"location":0,"echo":false,"script":null)
+]
+}
+C={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":67,"key_label":0,"unicode":99,"location":0,"echo":false,"script":null)
+]
+}
+A_Saltar_Mando={
+"deadzone": 0.5,
+"events": [Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":0,"pressure":0.0,"pressed":true,"script":null)
+]
+}
+B_Defenderse_Mando={
+"deadzone": 0.5,
+"events": [Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":1,"pressure":0.0,"pressed":true,"script":null)
+]
+}
+Y_Ataque_Fuerte_Mando={
+"deadzone": 0.5,
+"events": [Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":3,"pressure":0.0,"pressed":true,"script":null)
+]
+}
+X_Ataque_Normal_Mando={
+"deadzone": 0.5,
+"events": [Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":2,"pressure":0.0,"pressed":true,"script":null)
+]
+}
+Moverse_Izquierda_Mando={
+"deadzone": 0.5,
+"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":0,"axis_value":-1.0,"script":null)
+]
+}
+Moverse_Derecha_Mando={
+"deadzone": 0.5,
+"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":0,"axis_value":1.0,"script":null)
+]
+}
+F_Interactuar={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":70,"key_label":0,"unicode":102,"location":0,"echo":false,"script":null)
+]
+}
+tecla_prueba={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":83,"key_label":0,"unicode":115,"location":0,"echo":false,"script":null)
+]
+}
+
+[layer_names]
+
+2d_physics/layer_1="Entorno"
+2d_physics/layer_2="Plataformas"
+2d_physics/layer_3="Proyectiles"
+2d_physics/layer_5="Objetos_Recogibles"
+2d_physics/layer_10="Player"
+2d_physics/layer_11="Area_Ataque_Player"
+2d_physics/layer_12="Area_Herido_Player"
+2d_physics/layer_20="Enemigo"
+2d_physics/layer_21="Area_Ataque_Enemigo"
+2d_physics/layer_22="Area_Herido_Enemigo"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0

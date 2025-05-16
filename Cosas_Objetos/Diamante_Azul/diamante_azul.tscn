@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://xu8glukamymf"]
+
+[ext_resource type="Texture2D" uid="uid://d04an4j3qxr74" path="res://Assests/Imagenes/Objetos/Diamante_Azul/01.png" id="1_ck3pa"]
+[ext_resource type="Script" path="res://Cosas_Objetos/Diamante_Azul/diamante_azul.gd" id="1_qfbkl"]
+[ext_resource type="Texture2D" uid="uid://bvs8tqfd7f3lf" path="res://Assests/Imagenes/Objetos/Diamante_Azul/02.png" id="2_lgnir"]
+[ext_resource type="Texture2D" uid="uid://cx5nbdewga5pg" path="res://Assests/Imagenes/Objetos/Diamante_Azul/03.png" id="3_d8amd"]
+[ext_resource type="Texture2D" uid="uid://6cfvp7hoona5" path="res://Assests/Imagenes/Objetos/Diamante_Azul/04.png" id="4_ihj1f"]
+[ext_resource type="AudioStream" uid="uid://b3d7h2csjxq73" path="res://Assests/Efectos_de_Sonido/Coger_Diamante.mp3" id="6_fwgkk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5ks3l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ck3pa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_lgnir")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_d8amd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ihj1f")
+}],
+"loop": true,
+"name": &"Giro",
+"speed": 6.0
+}]
+
+[node name="Diamante_Azul" type="RigidBody2D"]
+collision_layer = 16
+collision_mask = 19
+script = ExtResource("1_qfbkl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_5ks3l")
+animation = &"Giro"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(2, 2)
+polygon = PackedVector2Array(0, 8, -8, 0, -8, -8, 8, -8, 8, 0)
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 512
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+scale = Vector2(2, 2)
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 0, 0, 8, -8, 0)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_fwgkk")
+volume_db = 6.0

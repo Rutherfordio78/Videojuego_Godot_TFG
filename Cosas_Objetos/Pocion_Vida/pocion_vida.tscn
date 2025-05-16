@@ -1,0 +1,66 @@
+[gd_scene load_steps=11 format=3 uid="uid://cl2pltu7t2guu"]
+
+[ext_resource type="Texture2D" uid="uid://bvauwstb6e4sl" path="res://Assests/Imagenes/Objetos/Pocion_Vida/01.png" id="1_fcx8i"]
+[ext_resource type="Script" path="res://Cosas_Objetos/Pocion_Vida/pocion_vida.gd" id="1_y6uut"]
+[ext_resource type="Texture2D" uid="uid://macsv4adf64x" path="res://Assests/Imagenes/Objetos/Pocion_Vida/02.png" id="2_gc82f"]
+[ext_resource type="Texture2D" uid="uid://c3xy0otlky8yt" path="res://Assests/Imagenes/Objetos/Pocion_Vida/03.png" id="3_r6tqp"]
+[ext_resource type="Texture2D" uid="uid://ddm485kh5dymi" path="res://Assests/Imagenes/Objetos/Pocion_Vida/04.png" id="4_a14u7"]
+[ext_resource type="Texture2D" uid="uid://bhq0781ap4khg" path="res://Assests/Imagenes/Objetos/Pocion_Vida/05.png" id="5_tmm57"]
+[ext_resource type="Texture2D" uid="uid://df80av4jvmq3o" path="res://Assests/Imagenes/Objetos/Pocion_Vida/06.png" id="6_loaj5"]
+[ext_resource type="Texture2D" uid="uid://duhtfvyl43vlw" path="res://Assests/Imagenes/Objetos/Pocion_Vida/07.png" id="7_icbm0"]
+[ext_resource type="AudioStream" uid="uid://bbb37v1epoe2b" path="res://Assests/Efectos_de_Sonido/beber_Pocion.mp3" id="9_t8bfg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p2lve"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_fcx8i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_gc82f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_r6tqp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_a14u7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_tmm57")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_loaj5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_icbm0")
+}],
+"loop": true,
+"name": &"Giro",
+"speed": 6.0
+}]
+
+[node name="Pocion_Vida" type="RigidBody2D"]
+collision_layer = 16
+collision_mask = 19
+script = ExtResource("1_y6uut")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(2, 2)
+polygon = PackedVector2Array(-3, 0, -3, -6, 3, -6, 3, 0, 5, 2, 5, 8, -5, 8, -5, 2)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_p2lve")
+animation = &"Giro"
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 512
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+scale = Vector2(2, 2)
+polygon = PackedVector2Array(-3, 0, -3, -6, 3, -6, 3, 0, 5, 2, 5, 8, -5, 8, -5, 2)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_t8bfg")
+volume_db = 10.0

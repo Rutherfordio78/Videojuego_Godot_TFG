@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://bnegv42t6igh7"]
+
+[ext_resource type="Script" path="res://Cosas_Menus/Interface_Usuario/barra_de_vida.gd" id="1_qim17"]
+[ext_resource type="Texture2D" uid="uid://bhjiydk4gqvbx" path="res://Assests/Imagenes/Interface_Usuario/GUI13.png" id="3_ecf5y"]
+[ext_resource type="Texture2D" uid="uid://c0htub8ophfvl" path="res://Assests/Imagenes/Interface_Usuario/GUI12.png" id="4_ffv33"]
+[ext_resource type="Texture2D" uid="uid://wnmqv8wqdydp" path="res://Assests/Imagenes/Interface_Usuario/GUISprite15.png" id="4_k57xm"]
+[ext_resource type="Texture2D" uid="uid://cqja8cm0cbq87" path="res://Assests/Imagenes/Interface_Usuario/GUISprite14.png" id="5_qvq17"]
+
+[node name="Barra_de_Vida" type="HBoxContainer"]
+z_index = 25
+offset_left = 497.0
+offset_top = 301.0
+offset_right = 691.0
+offset_bottom = 351.0
+theme_override_constants/separation = -6
+script = ExtResource("1_qim17")
+
+[node name="Corazon_Vida" type="TextureProgressBar" parent="."]
+layout_mode = 2
+max_value = 10.0
+fill_mode = 3
+texture_over = ExtResource("4_k57xm")
+texture_progress = ExtResource("5_qvq17")
+
+[node name="Barra_Vida" type="TextureProgressBar" parent="."]
+layout_mode = 2
+max_value = 90.0
+texture_over = ExtResource("3_ecf5y")
+texture_progress = ExtResource("4_ffv33")

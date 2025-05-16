@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=3 uid="uid://cw1ht7h0qerdh"]
+
+[ext_resource type="Texture2D" uid="uid://0nu6fqy4ccu1" path="res://Assests/Imagenes/Bala_De_Madera/Idle/1.png" id="1_7sxi1"]
+[ext_resource type="Script" path="res://Cosas_Enemigos/Trampa_Torreta/bala_de_madera_derecha.gd" id="1_kqhl0"]
+[ext_resource type="Texture2D" uid="uid://c5gph7nbp2pdk" path="res://Assests/Imagenes/Bala_De_Madera/Destroyed/1.png" id="2_xhr6n"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4vvuj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7sxi1")
+}],
+"loop": true,
+"name": &"Disparo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_xhr6n")
+}],
+"loop": true,
+"name": &"Roto",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ksbi"]
+size = Vector2(12, 6)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vj002"]
+size = Vector2(12, 6)
+
+[node name="Bala_De_Madera_Derecha" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 5
+script = ExtResource("1_kqhl0")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+scale = Vector2(1.3, 1.3)
+sprite_frames = SubResource("SpriteFrames_4vvuj")
+animation = &"Disparo"
+autoplay = "Disparo"
+flip_h = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_1ksbi")
+
+[node name="Area2D2" type="Area2D" parent="."]
+collision_layer = 1048576
+collision_mask = 2048
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+shape = SubResource("RectangleShape2D_vj002")
+
+[connection signal="area_entered" from="Area2D2" to="." method="_on_area_2d_2_area_entered"]

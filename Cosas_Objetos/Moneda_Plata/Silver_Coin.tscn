@@ -1,0 +1,68 @@
+[gd_scene load_steps=8 format=3 uid="uid://cvjlhw0lujx1o"]
+
+[ext_resource type="Script" path="res://Cosas_Objetos/Moneda_Plata/silver_coin.gd" id="1_jxo2c"]
+[ext_resource type="Texture2D" uid="uid://hwjd2r1xsgdi" path="res://Assests/Imagenes/Objetos/Moneda_Plata/01.png" id="1_wlsuh"]
+[ext_resource type="Texture2D" uid="uid://dhkk04jr6w4xr" path="res://Assests/Imagenes/Objetos/Moneda_Plata/02.png" id="2_8cwpd"]
+[ext_resource type="Texture2D" uid="uid://dtv7wo4usgqvy" path="res://Assests/Imagenes/Objetos/Moneda_Plata/03.png" id="3_si1ux"]
+[ext_resource type="Texture2D" uid="uid://7x8v6lqfomii" path="res://Assests/Imagenes/Objetos/Moneda_Plata/04.png" id="4_je3fl"]
+[ext_resource type="AudioStream" uid="uid://41l1p67umcbn" path="res://Assests/Efectos_de_Sonido/coin-recieved-230517.mp3" id="6_ys2m3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iyss4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_wlsuh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_8cwpd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_si1ux")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_je3fl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_wlsuh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_8cwpd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_si1ux")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_je3fl")
+}],
+"loop": true,
+"name": &"Giro",
+"speed": 5.0
+}]
+
+[node name="SilverCoin" type="RigidBody2D"]
+position = Vector2(381, 249)
+collision_layer = 16
+collision_mask = 19
+script = ExtResource("1_jxo2c")
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
+scale = Vector2(2, 2)
+polygon = PackedVector2Array(-2, -5, 3, -5, 6, -2, 6, 3, 3, 6, -2, 6, -5, 3, -5, -2)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_iyss4")
+animation = &"Giro"
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 512
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+scale = Vector2(2, 2)
+polygon = PackedVector2Array(-2, -5, 3, -5, 6, -2, 6, 3, 3, 6, -2, 6, -5, 3, -5, -2)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_ys2m3")
+volume_db = -11.774
+pitch_scale = 1.04

@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3msf6i6vpec8"]
+
+[ext_resource type="Texture2D" uid="uid://7wte3nhhu0ra" path="res://Assests/Imagenes/Pantano_Setas/BG_3/BG_3.png" id="1_0gj4d"]
+[ext_resource type="Texture2D" uid="uid://drf5ql5u7dljv" path="res://Assests/Imagenes/Pantano_Setas/BG_2/BG_2.png" id="1_rogs3"]
+
+[node name="Fondo_Paralax_Pantano_Setas" type="Node2D"]
+position = Vector2(1024, 192)
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+scroll_scale = Vector2(1.2, 1)
+repeat_size = Vector2(2560, 0)
+repeat_times = 2
+
+[node name="Bg3" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(256, -1094)
+scale = Vector2(1.25, 4.51)
+texture = ExtResource("1_0gj4d")
+
+[node name="Parallax2D2" type="Parallax2D" parent="."]
+scroll_scale = Vector2(1.2, 1)
+repeat_size = Vector2(2560, 0)
+repeat_times = 2
+
+[node name="Bg2" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(254.675, -1092.3)
+scale = Vector2(1.407, 4.5)
+texture = ExtResource("1_rogs3")

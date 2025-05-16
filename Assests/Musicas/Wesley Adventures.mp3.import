@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ck72f77gbk150"
+path="res://.godot/imported/Wesley Adventures.mp3-ec6f4f2ee7f41f04fa18a8e0b661a4cc.mp3str"
+
+[deps]
+
+source_file="res://Assests/Musicas/Wesley Adventures.mp3"
+dest_files=["res://.godot/imported/Wesley Adventures.mp3-ec6f4f2ee7f41f04fa18a8e0b661a4cc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

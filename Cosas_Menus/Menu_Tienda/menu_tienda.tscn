@@ -1,0 +1,323 @@
+[gd_scene load_steps=11 format=3 uid="uid://dib5xy81tvwkp"]
+
+[ext_resource type="Script" path="res://Cosas_Menus/Menu_Tienda/menu_tienda.gd" id="1_l61ou"]
+[ext_resource type="Texture2D" uid="uid://bp0j4lxouwf3r" path="res://Assests/Imagenes/GUI_2/Fantasy Minimal Pixel Art GUI by eta-commercial-free/UI/RectangleBox_96x96.png" id="2_wkx7w"]
+[ext_resource type="Texture2D" uid="uid://sadvwqswln4i" path="res://Assests/Imagenes/GUI_2/Fantasy Minimal Pixel Art GUI by eta-commercial-free/UI/TitleBox_64x16.png" id="3_b1x82"]
+[ext_resource type="FontFile" uid="uid://dfffu801f73p7" path="res://Assests/Tipos_de_Letra/MedievalSharp-Regular.ttf" id="3_pel2a"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cfe8q"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5jq7k"]
+bg_color = Color(0.329412, 0.615686, 0.921569, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dhr1g"]
+bg_color = Color(0.329412, 0.615686, 0.921569, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c6tsd"]
+bg_color = Color(0.329412, 0.615686, 0.921569, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2enlf"]
+bg_color = Color(0.329412, 0.615686, 0.921569, 1)
+
+[sub_resource type="Theme" id="Theme_q4u3h"]
+VScrollBar/styles/grabber = SubResource("StyleBoxFlat_cfe8q")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_5jq7k")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_dhr1g")
+VScrollBar/styles/scroll = SubResource("StyleBoxFlat_c6tsd")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxFlat_2enlf")
+
+[node name="Menu_Tienda" type="Control"]
+layout_mode = 3
+anchor_right = 0.277778
+anchor_bottom = 0.493827
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l61ou")
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource("2_wkx7w")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.096875
+anchor_top = 0.10625
+anchor_right = 0.875
+anchor_bottom = 0.99375
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_q4u3h")
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+
+[node name="Vida" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(220, 45)
+layout_mode = 2
+texture = ExtResource("3_b1x82")
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Vida"]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 13.0
+offset_right = 134.0
+offset_bottom = 33.0
+theme_override_fonts/font = ExtResource("3_pel2a")
+theme_override_font_sizes/font_size = 14
+text = "Vida ⬆
+"
+
+[node name="Comprar_Vida" type="Button" parent="ScrollContainer/VBoxContainer/Vida"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 13.0
+offset_right = 69.0
+offset_bottom = 33.0
+theme_override_fonts/font = ExtResource("3_pel2a")
+theme_override_font_sizes/font_size = 10
+text = "Comprar"
+
+[node name="Label2" type="Label" parent="ScrollContainer/VBoxContainer/Vida"]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 15.0
+offset_right = 184.0
+offset_bottom = 32.0
+theme_override_fonts/font = ExtResource("3_pel2a")
+theme_override_font_sizes/font_size = 14
+text = "100$"
+
+[node name="Daño" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(220, 45)
+layout_mode = 2
+texture = ExtResource("3_b1x82")
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Daño"]
+layout_mode = 0
+offset_left = 93.0
+offset_top = 13.0
+offset_right = 138.0
+offset_bottom = 33.0
+theme_override_fonts/font = ExtResource("3_pel2a")
+theme_override_font_sizes/font_size = 14
+text = "Daño ⬆
+"
+
+[node name="Comprar_Daño" type="Button" parent="ScrollContainer/VBoxContainer/Daño"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 13.0
+offset_right = 69.0
+offset_bottom = 33.0
+theme_override_fonts/font = ExtResource("3_pel2a")
+theme_override_font_sizes/font_size = 10
+text = "Comprar"
+
+[node name="Label2" type="Label" parent="ScrollContainer/VBoxContainer/Daño"]
+layout_mode = 0
+offset_left = 153.0
+offset_top = 15.0
+offset_right = 185.0
+offset_bottom = 32.0
+theme_override_fonts/font = ExtResource("3_pel2a")
+theme_override_font_sizes/font_size = 14
+text = "100$"
+
+[node name="Cura" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(220, 45)
+layout_mode = 2
+texture = ExtResource("3_b1x82")
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Cura"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 15.0
+offset_right = 145.0
+offset_bottom = 32.0
+theme_override_fonts/font = ExtResource("3_pel2a")
+theme_override_font_sizes/font_size = 14
+text = "Cura - 20
+"
+
+[node name="Comprar_Cura" type="Button" parent="ScrollContainer/VBoxContainer/Cura"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 13.0
+offset_right = 69.0
+offset_bottom = 33.0
+theme_override_fonts/font = ExtResource("3_pel2a")
+theme_override_font_sizes/font_size = 10
+text = "Comprar"
+
+[node name="Label2" type="Label" parent="ScrollContainer/VBoxContainer/Cura"]
+layout_mode = 0
+offset_left = 157.0
+offset_top = 15.0
+offset_right = 189.0
+offset_bottom = 32.0
+theme_override_fonts/font = ExtResource("3_pel2a")
+theme_override_font_sizes/font_size = 14
+text = "100$"
+
+[node name="Prb_Crit" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(220, 45)
+layout_mode = 2
+texture = ExtResource("3_b1x82")
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Prb_Crit"]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 15.0
+offset_right = 148.0
+offset_bottom = 32.0
+theme_override_fonts/font = ExtResource("3_pel2a")
+theme_override_font_sizes/font_size = 14
+text = "Prb-Crit
+"
+
+[node name="Comprar_Prb_Crit" type="Button" parent="ScrollContainer/VBoxContainer/Prb_Crit"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 13.0
+offset_right = 69.0
+offset_bottom = 33.0
+theme_override_fonts/font = ExtResource("3_pel2a")
+theme_override_font_sizes/font_size = 10
+text = "Comprar"
+
+[node name="Label2" type="Label" parent="ScrollContainer/VBoxContainer/Prb_Crit"]
+layout_mode = 0
+offset_left = 155.0
+offset_top = 14.0
+offset_right = 187.0
+offset_bottom = 31.0
+theme_override_fonts/font = ExtResource("3_pel2a")
+theme_override_font_sizes/font_size = 14
+text = "100$"
+
+[node name="Crit_Dmg" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(220, 45)
+layout_mode = 2
+texture = ExtResource("3_b1x82")
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Crit_Dmg"]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 15.0
+offset_right = 148.0
+offset_bottom = 32.0
+theme_override_fonts/font = ExtResource("3_pel2a")
+theme_override_font_sizes/font_size = 14
+text = "Crit-Dmg
+"
+
+[node name="Comprar_Crit_Dmg" type="Button" parent="ScrollContainer/VBoxContainer/Crit_Dmg"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 13.0
+offset_right = 69.0
+offset_bottom = 33.0
+theme_override_fonts/font = ExtResource("3_pel2a")
+theme_override_font_sizes/font_size = 10
+text = "Comprar"
+
+[node name="Label2" type="Label" parent="ScrollContainer/VBoxContainer/Crit_Dmg"]
+layout_mode = 0
+offset_left = 157.0
+offset_top = 16.0
+offset_right = 189.0
+offset_bottom = 33.0
+theme_override_fonts/font = ExtResource("3_pel2a")
+theme_override_font_sizes/font_size = 14
+text = "100$"
+
+[node name="Municion_Maxima" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(220, 45)
+layout_mode = 2
+texture = ExtResource("3_b1x82")
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Municion_Maxima"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 14.0
+offset_right = 163.0
+offset_bottom = 34.0
+theme_override_fonts/font = ExtResource("3_pel2a")
+theme_override_font_sizes/font_size = 14
+text = "Ammo Max
+"
+
+[node name="Comprar_Ammo_Max" type="Button" parent="ScrollContainer/VBoxContainer/Municion_Maxima"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 13.0
+offset_right = 69.0
+offset_bottom = 33.0
+theme_override_fonts/font = ExtResource("3_pel2a")
+theme_override_font_sizes/font_size = 10
+text = "Comprar"
+
+[node name="Label2" type="Label" parent="ScrollContainer/VBoxContainer/Municion_Maxima"]
+layout_mode = 0
+offset_left = 157.0
+offset_top = 15.0
+offset_right = 189.0
+offset_bottom = 32.0
+theme_override_fonts/font = ExtResource("3_pel2a")
+theme_override_font_sizes/font_size = 14
+text = "100$"
+
+[node name="Municion" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(220, 45)
+layout_mode = 2
+texture = ExtResource("3_b1x82")
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Municion"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 15.0
+offset_right = 145.0
+offset_bottom = 32.0
+theme_override_fonts/font = ExtResource("3_pel2a")
+theme_override_font_sizes/font_size = 14
+text = "Ammo +1
+"
+
+[node name="Comprar_Ammo" type="Button" parent="ScrollContainer/VBoxContainer/Municion"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 13.0
+offset_right = 69.0
+offset_bottom = 33.0
+theme_override_fonts/font = ExtResource("3_pel2a")
+theme_override_font_sizes/font_size = 10
+text = "Comprar"
+
+[node name="Label2" type="Label" parent="ScrollContainer/VBoxContainer/Municion"]
+layout_mode = 0
+offset_left = 157.0
+offset_top = 15.0
+offset_right = 189.0
+offset_bottom = 32.0
+theme_override_fonts/font = ExtResource("3_pel2a")
+theme_override_font_sizes/font_size = 14
+text = "100$"
+
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Vida/Comprar_Vida" to="." method="_on_comprar_vida_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Daño/Comprar_Daño" to="." method="_on_comprar_daño_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Cura/Comprar_Cura" to="." method="_on_comprar_cura_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Prb_Crit/Comprar_Prb_Crit" to="." method="_on_comprar_prb_crit_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Crit_Dmg/Comprar_Crit_Dmg" to="." method="_on_comprar_crit_dmg_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Municion_Maxima/Comprar_Ammo_Max" to="." method="_on_comprar_ammo_max_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Municion/Comprar_Ammo" to="." method="_on_comprar_ammo_pressed"]

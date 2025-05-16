@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=3 uid="uid://ba2sgqtbf4xyr"]
+
+[ext_resource type="Script" path="res://Cosas_Personajes/Samurai/shuriken_izquierda.gd" id="1_7pk5g"]
+[ext_resource type="Texture2D" uid="uid://xospcpfiuec1" path="res://Assests/Imagenes/Players/Samurai/Shuriken/shuriken.png" id="1_kns1o"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_03roh"]
+atlas = ExtResource("1_kns1o")
+region = Rect2(0, 0, 16, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_068ay"]
+atlas = ExtResource("1_kns1o")
+region = Rect2(16, 0, 16, 15)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7cf8q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_03roh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_068ay")
+}],
+"loop": true,
+"name": &"Giro",
+"speed": 20.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xvv13"]
+radius = 9.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ueimq"]
+radius = 9.0
+
+[node name="Shuriken_Izquierda" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 5
+script = ExtResource("1_7pk5g")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(1.3, 1.3)
+sprite_frames = SubResource("SpriteFrames_7cf8q")
+animation = &"Giro"
+frame = 1
+frame_progress = 0.0436361
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_xvv13")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 1024
+collision_mask = 2097152
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_ueimq")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
