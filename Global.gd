@@ -36,10 +36,10 @@ var MAPAS_PANTANO = [preload("res://Cosas_Escenario/Niveles_Pantano/Version_1/ni
 var MAPAS_CUEVAS = [preload("res://Cosas_Escenario/Niveles_Cuevas/Version_1/nivel_cuevas_1.tscn"),
 					preload("res://Cosas_Escenario/Niveles_Cuevas/Version_2/nivel_cuevas_2.tscn")]
 
-var MAPAS_CASTILLO = []
-
 var MAPAS_CEMENTERIO = [preload("res://Cosas_Escenario/Niveles_Cementerio/Version_1/nivel_cementerio_1.tscn"),
 						preload("res://Cosas_Escenario/Niveles_Cementerio/Version_2/nivel_cementerio_2.tscn")]
+
+var MAPAS_CASTILLO = [preload("res://Cosas_Escenario/Niveles_Castillo/Version_1/nivel_castillo_1.tscn")]
 
 var MAPAS_BOSS = [preload("res://Cosas_Escenario/Niveles_Bosses/Boss_Rey_Sombra/nivel_boss_rey_sombra.tscn")]
 

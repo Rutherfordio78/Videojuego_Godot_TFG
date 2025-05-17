@@ -239,7 +239,7 @@ func cambiar_estado(nuevo_estado: Estado) -> void:
 # --------------------
 func _on_eliminar_enemigo() -> void:
 	# Instancia el ítem dropeado usando la función global
-	var dropped_item = Global.Dropear_Items_Normales()
+	var dropped_item = Global.Dropear_Items_Especiales()
 	# Posiciona el ítem en la ubicación del enemigo
 	dropped_item.global_position = global_position
 	# Agrega el ítem a la escena actual

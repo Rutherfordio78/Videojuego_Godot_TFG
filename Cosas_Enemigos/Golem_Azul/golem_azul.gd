@@ -193,7 +193,7 @@ func _on_animation_finished(anim_name: String) -> void:
 
 # Lógica de eliminación y dropeo de ítems
 func _on_eliminar_enemigo() -> void:
-	var dropped_item = Global.Dropear_Items_Normales()
+	var dropped_item = Global.Dropear_Items_Especiales()
 	dropped_item.global_position = global_position
 	get_tree().current_scene.add_child(dropped_item)
 	queue_free()

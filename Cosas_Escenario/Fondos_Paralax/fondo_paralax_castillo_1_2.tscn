@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfnum80r0vc7i"]
+
+[ext_resource type="Texture2D" uid="uid://0pmdd7n4ls3g" path="res://Assests/Imagenes/Castillo/Opcion_2/layer_1.png" id="1_uk80v"]
+
+[node name="Fondo_Paralax_Castillo_1_2" type="Node2D"]
+
+[node name="ParallaxLayer" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.9, 1)
+repeat_size = Vector2(320, 0)
+repeat_times = 20
+
+[node name="Layer1" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(160, 0)
+texture = ExtResource("1_uk80v")

@@ -9,7 +9,7 @@ var GRAVEDAD = Global.GRAVEDAD  # Traemos la gravedad desde el global
 
 var item_normal_scenes = Global.ITEMS_DROPEABLES_NORMALES
 var item_especial_scenes = Global.ITEMS_DROPEABLES_ESPECIALES
-var probabilidad_especial = 0.05  # Probabilidad de cofre especial 
+var probabilidad_especial = 0.10  # Probabilidad de cofre especial 
 
 func _ready() -> void:
 	cofre_area.body_entered.connect(_on_cofre_area_body_entered)
@@ -33,7 +33,7 @@ func _on_cofre_area_body_entered(body: Node) -> void:
 		var es_especial = randf() < probabilidad_especial
 		if es_especial:
 			sprite.play("Abierto_Especial")
-			spawn_items(es_especial, 4, 5)
+			spawn_items(es_especial, 5, 6)
 		else:
 			sprite.play("Abierto_Normal")
 			spawn_items(es_especial, 1, 3)

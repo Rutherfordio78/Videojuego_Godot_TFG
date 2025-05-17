@@ -1,5 +1,12 @@
 extends Control
 
+@onready var scroll_container: ScrollContainer = $ScrollContainer
+
+func _ready() -> void:
+	scroll_container.vertical_scroll_mode = 3
+
+
+
 
 func _process(delta: float) -> void:
 	$ScrollContainer/VBoxContainer/Vida/Label2.text = "💰 "+str(Global.precio_vida)

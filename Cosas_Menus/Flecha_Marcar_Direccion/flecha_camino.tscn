@@ -4,6 +4,7 @@
 [ext_resource type="Script" path="res://Cosas_Menus/Flecha_Marcar_Direccion/flecha_camino.gd" id="2_gwcmm"]
 
 [node name="Flecha_Camino" type="Sprite2D"]
+z_index = 23
 rotation = 1.5708
 scale = Vector2(2, 2)
 texture = ExtResource("1_7c1a4")

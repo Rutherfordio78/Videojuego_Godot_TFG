@@ -113,7 +113,7 @@ func _process_dead(delta: float) -> void:
 	current_color.a -= fade_speed * delta
 	sprite.modulate = current_color
 	if current_color.a <= 0:
-		var dropped_item = Global.Dropear_Items_Normales()
+		var dropped_item = Global.Dropear_Items_Especiales()
 		dropped_item.global_position = global_position
 		# Se agrega el ítem a la escena actual
 		get_tree().current_scene.add_child(dropped_item)

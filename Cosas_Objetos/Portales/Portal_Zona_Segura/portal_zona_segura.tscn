@@ -940,6 +940,7 @@ position = Vector2(0, -24)
 shape = SubResource("CapsuleShape2D_f0udu")
 
 [node name="Label2" type="Label" parent="."]
+z_index = 23
 offset_left = -64.0
 offset_top = -140.0
 offset_right = 65.0
