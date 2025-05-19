@@ -1,81 +1,81 @@
-# Videojuego_Godot_TFG
+<!-- PROJECT BADGES -->
+![Godot Engine 4.3](https://img.shields.io/badge/Engine-Godot%204.3-6DA55F.svg)  
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-📄 Overview
+# Angel Request
 
-Angel Request es un juego roguelike de plataformas 2D en el que encarnas a un alma que debe cumplir una última misión para ganarse el acceso al cielo. Tras ser rechazado a las puertas celestiales, recibirás la petición de viajar a una dimensión alternativa y derrotar a un ser maligno que amenaza el orden celestial.
-GitHub
-Wikipedia
-🚀 Características Principales
+**Angel Request** es un juego **roguelike** de plataformas 2D en el que encarnas a un alma que debe cumplir una última misión para ganarse el acceso al cielo. Tras ser rechazado a las puertas celestiales, recibirás la petición de viajar a una dimensión alternativa y derrotar a un ser maligno que amenaza el orden celestial :contentReference[oaicite:0]{index=0}.
 
-    Personajes Únicos: Varios protagonistas, cada uno con habilidades exclusivas y estilo de combate distintivo.
-    GitHub
+---
 
-    Rutas Variables: Elige entre diferentes caminos temáticos; cada ruta ofrece niveles únicos y desafiantes.
-    GitHub
+## 🚀 Características Principales
 
-    Contenido Aleatorio: Niveles generados proceduralmente y drops impredecibles en cada partida.
+- **Personajes Únicos**  
+  Varios protagonistas, cada uno con habilidades exclusivas y estilo de combate distintivo.
+- **Rutas Variables**  
+  Elige entre diferentes caminos temáticos; cada ruta ofrece niveles únicos y desafiantes.
+- **Contenido Aleatorio**  
+  Niveles generados proceduralmente y drops impredecibles en cada partida.
+- **Rejugabilidad**  
+  Mecánicas roguelike que garantizan que cada sesión sea diferente :contentReference[oaicite:1]{index=1}.
 
-    Rejugabilidad: Mecánicas roguelike que garantizan que cada sesión sea diferente.
-    FreeCodeCamp
+---
 
-🛠️ Requisitos
+## 🛠️ Requisitos
 
-    Godot Engine 4.3 (o superior).
-    GitHub Docs
+- **Godot Engine 4.3** (o superior)  
+  Descárgalo y consulta las notas de la versión en el sitio oficial :contentReference[oaicite:2]{index=2}.
+- **Recursos incluidos**: No se requieren plugins adicionales; todos los assets están en el repositorio.
 
-    No se requieren plugins adicionales; todos los recursos están incluidos en el repositorio.
+---
 
-💻 Instalación y Ejecución
+## 💻 Instalación y Ejecución
 
-    Clona el repositorio:
+1. **Clona el repositorio**  
+   ```bash
+       git clone https://github.com/tu-usuario/angel-request.git
+       cd angel-request
+2. Abre con Godot 4.3
 
-    git clone https://github.com/tu-usuario/angel-request.git
-    cd angel-request
+        Inicia Godot, selecciona la carpeta del proyecto y pulsa ▶️ Play.
 
-    Desde Godot: Abre la carpeta del proyecto con Godot 4.3 y presiona ▶️ “Play”.
-
-    Ejecutables Precompilados:
+3. Ejecutables Precompilados
 
         Windows: descarga AngelRequest_Windows.zip y ejecuta AngelRequest.exe.
 
         Linux: descarga AngelRequest_Linux.tar.gz, descomprime y ejecuta AngelRequest.x86_64.
 
         macOS: descarga AngelRequest_macOS.zip, descomprime y abre AngelRequest.app.
-        FreeCodeCamp
 
 🎮 Controles
 
-    Teclado:
+    Teclado
 
-        Flechas ◀️▶️ para moverse
+        ◀️⬆️⬇️▶️ Flechas → Moverse
 
-        Z – Acción primaria
+        Z → Acción primaria
 
-        X – Acción secundaria
+        X → Acción secundaria
 
-        C – Habilidad especial
+        C → Habilidad especial
 
-        Barra espaciadora – Saltar
+        ␣ (barra espaciadora) → Saltar
 
-    Mando: Soportado (menús pendientes de adaptación).
-    Medium
+    Mando
+    Soportado (menús pendientes de adaptación).
 
 📸 Capturas y Vídeo
 
-
     🎥 Trailer oficial: YouTube – Angel Request Trailer
-    Hatica
 
 🤝 Contribución
 
-Este proyecto no está abierto a contribuciones externas por el momento, pero ¡agradecemos tu interés!
+Este proyecto no está abierto a contribuciones externas por el momento, ¡pero agradecemos tu interés!
 📝 Licencia
 
-Recomendamos usar la MIT License para permitir el uso libre del código con atribución. Puedes generarla automáticamente en GitHub o consultar:
-
-    Guía de licencias de GitHub
-    GitHub Docs
-
+Este repositorio está bajo la MIT License. Consulta el archivo LICENSE para más detalles
+Wikipedia
+.
 📈 Roadmap
 
     Nuevas rutas temáticas y jefes finales
@@ -93,3 +93,5 @@ Recomendamos usar la MIT License para permitir el uso libre del código con atri
     Email: tu.email@ejemplo.com
 
     Twitter: @tu_usuario
+
+
