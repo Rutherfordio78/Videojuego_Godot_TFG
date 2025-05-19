@@ -17,14 +17,14 @@
 - **Contenido Aleatorio**  
   Niveles generados proceduralmente y drops impredecibles en cada partida.
 - **Rejugabilidad**  
-  Mecánicas roguelike que garantizan que cada sesión sea diferente :contentReference[oaicite:1]{index=1}.
+  Mecánicas roguelike que garantizan que cada sesión sea diferente.
 
 ---
 
 ## 🛠️ Requisitos
 
 - **Godot Engine 4.3** (o superior)  
-  Descárgalo y consulta las notas de la versión en el sitio oficial :contentReference[oaicite:2]{index=2}.
+  Descárgalo y consulta las notas de la versión en el sitio oficial.
 - **Recursos incluidos**: No se requieren plugins adicionales; todos los assets están en el repositorio.
 
 ---
