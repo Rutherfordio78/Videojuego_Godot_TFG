@@ -4,7 +4,7 @@
 
 # Angel Request
 
-**Angel Request** es un juego **roguelike** de plataformas 2D en el que encarnas a un alma que debe cumplir una última misión para ganarse el acceso al cielo. Tras ser rechazado a las puertas celestiales, recibirás la petición de viajar a una dimensión alternativa y derrotar a un ser maligno que amenaza el orden celestial :contentReference[oaicite:0]{index=0}.
+**Angel Request** es un juego **roguelike** de plataformas 2D en el que encarnas a un alma que debe cumplir una última misión para ganarse el acceso al cielo. Tras ser rechazado a las puertas celestiales, recibirás la petición de viajar a una dimensión alternativa y derrotar a un ser maligno que amenaza el orden celestial.
 
 ---
 
