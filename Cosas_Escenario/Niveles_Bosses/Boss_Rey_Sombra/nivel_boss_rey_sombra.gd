@@ -32,6 +32,13 @@ var markers_Premios
 var premios_existen = false
 
 func _ready() -> void:
+	
+	Global.veces_cargadas_pantano = 0
+	Global.veces_cargadas_cuevas = 0
+	Global.veces_cargadas_castillo = 0
+	Global.veces_cargadas_cementerio = 0
+	
+	
 	randomize()
 	Global.BOSS_VIVO = true
 	cargar_portal()

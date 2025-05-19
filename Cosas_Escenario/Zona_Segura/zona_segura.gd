@@ -45,11 +45,11 @@ func cargar_portal():
 	
 	# 3. Si se han completado 2 mapas ya sea del cementerio o de las cuevas, se carga el portal del castillo
 	elif Global.veces_cargadas_cementerio >= 2 or Global.veces_cargadas_cuevas >= 2:
-		escena_portal = null
+		escena_portal = preload("res://Cosas_Objetos/Portales/Portal_Castillo/portal_castillo.tscn")
 	
-	# 4. Si se han jugado 2 mapas del castillo, se carga el portal del boss
-	elif Global.veces_cargadas_castillo >= 2:
-		escena_portal = null
+	# 4. Si se han jugado 1 mapas del castillo, se carga el portal del boss
+	elif Global.veces_cargadas_castillo >= 1:
+		escena_portal = preload("res://Cosas_Objetos/Portales/Portal_Boss/portal_boss.tscn")
 	
 	# Instanciamos y posicionamos el portal (o portales)
 	if escena_portal:

@@ -30,7 +30,7 @@ func cargar_personaje():
 
 func cargar_portal():
 	var escena_portal : PackedScene = null
-	if Global.veces_cargadas_cementerio == 2:
+	if Global.veces_cargadas_castillo == 1:
 		escena_portal = preload("res://Cosas_Objetos/Portales/Portal_Zona_Segura/portal_zona_segura.tscn")
 	else:
 		escena_portal = preload("res://Cosas_Objetos/Portales/Portal_Castillo/portal_castillo.tscn")
