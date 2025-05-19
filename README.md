@@ -88,10 +88,6 @@ Wikipedia
 
 📬 Contacto
 
-    Autor: Tu Nombre
+    Autor: Jaime Gutierrez Pereira
 
-    Email: tu.email@ejemplo.com
-
-    Twitter: @tu_usuario
-
-
+    Email: gutierrezpereirajaime@gmail.com
