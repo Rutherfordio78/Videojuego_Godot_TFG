@@ -12,6 +12,7 @@ var direccion_num: int = 1
 # Referencia al AnimationTree y al controlador de estados.
 @onready var animation_player: AnimationPlayer = $Animaciones/AnimationPlayer
 @onready var punto_lanzar: Marker2D = $Punto_Lanzar
+@onready var menu_pausar_juego: Control = $Menu_Pausar_Juego
 
 var shuriken_derecha = preload("res://Cosas_Personajes/Samurai/shuriken_derecha.tscn")
 var shuriken_izquierda = preload("res://Cosas_Personajes/Samurai/shuriken_izquierda.tscn")
@@ -43,10 +44,17 @@ var saltos_maximos: int = 2
 
 func _ready() -> void:
 	ultimo_suelo = global_position
+	process_mode = Node.PROCESS_MODE_ALWAYS
 
+func _unhandled_input(event):
+	if event.is_action_pressed("ui_cancel"):
+		get_tree().paused = not get_tree().paused
+		menu_pausar_juego.visible = get_tree().paused
 
 func _physics_process(delta: float) -> void:
-	
+	if get_tree().paused:
+		return
+		
 	EstadisticasPlayer.posicion_Player = global_position
 	
 	if EstadisticasPlayer.vida_actual_Player == 0:

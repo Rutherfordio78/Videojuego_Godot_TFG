@@ -13,6 +13,7 @@ var direccion_num: int
 @onready var animation_tree: AnimationTree = $Animaciones/AnimationTree
 @onready var state_machine: AnimationNodeStateMachinePlayback = animation_tree.get("parameters/playback")
 @onready var animation_player: AnimationPlayer = $Animaciones/AnimationPlayer
+@onready var menu_pausar_juego: Control = $Menu_Pausar_Juego
 
 # Variable para las Boxes de Recibir y hacer Daño
 @onready var boxes_dano = $Boxes_Daño
@@ -43,9 +44,17 @@ func _ready() -> void:
 	# Activa el AnimationTree.
 	animation_tree.active = true
 	ultimo_suelo = global_position
+	process_mode = Node.PROCESS_MODE_ALWAYS
+
+func _unhandled_input(event):
+	if event.is_action_pressed("ui_cancel"):
+		get_tree().paused = not get_tree().paused
+		menu_pausar_juego.visible = get_tree().paused
 
 func _physics_process(delta: float) -> void:
-	
+	if get_tree().paused:
+		return
+
 	EstadisticasPlayer.posicion_Player = global_position
 	
 	if EstadisticasPlayer.vida_actual_Player == 0:

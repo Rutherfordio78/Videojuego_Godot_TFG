@@ -44,11 +44,11 @@ text = "Iniciar
 "
 script = ExtResource("4_xlvim")
 
-[node name="Options" type="Button" parent="VBoxContainer"]
+[node name="Tutorial" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_ppdgk")
 theme_override_font_sizes/font_size = 98
-text = "Opciones
+text = "Tutorial
 "
 script = ExtResource("4_xlvim")
 
@@ -67,5 +67,5 @@ autoplay = true
 parameters/looping = true
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="VBoxContainer/Tutorial" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]

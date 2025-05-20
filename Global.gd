@@ -1,10 +1,12 @@
 extends Node
 
-var personaje_seleccionado: String = "Guerrero"
+var personaje_seleccionado: String = "Guerrera"
 
 var GRAVEDAD = 500
 
 var BOSS_VIVO = true
+
+var tutorial = 0
 
 # --------------------
 # Variables de la Tienda

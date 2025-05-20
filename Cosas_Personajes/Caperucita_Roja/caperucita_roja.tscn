@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://cyutjr3e7023r"]
+[gd_scene load_steps=47 format=3 uid="uid://cyutjr3e7023r"]
 
 [ext_resource type="Script" path="res://Cosas_Personajes/Caperucita_Roja/caperucita_roja.gd" id="1_bxl1l"]
 [ext_resource type="Texture2D" uid="uid://dr0dn5udw0m8x" path="res://Assests/Imagenes/Players/Caperucita_Roja/Idle/idle_1.png" id="1_islb3"]
@@ -27,6 +27,7 @@
 [ext_resource type="PackedScene" uid="uid://cw2y8tq332au0" path="res://Cosas_Menus/Interface_Usuario/contador_monedas.tscn" id="22_dm73q"]
 [ext_resource type="PackedScene" uid="uid://b3vscqa15uxu5" path="res://Cosas_Menus/Interface_Usuario/contador_llaves.tscn" id="23_v0a7d"]
 [ext_resource type="PackedScene" uid="uid://dg8id5g4j8xun" path="res://Cosas_Menus/Interface_Usuario/contador_municion.tscn" id="24_rhtpk"]
+[ext_resource type="PackedScene" uid="uid://xcri4tbmrqgd" path="res://Cosas_Menus/Menu_Pausar_Juego/menu_pausar_juego.tscn" id="28_ns5mo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_brh4o"]
 size = Vector2(16, 32)
@@ -2669,6 +2670,9 @@ offset_left = 248.0
 offset_top = -280.0
 offset_right = 248.0
 offset_bottom = -280.0
+
+[node name="Menu_Pausar_Juego" parent="." instance=ExtResource("28_ns5mo")]
+visible = false
 
 [connection signal="area_entered" from="Boxes_Daño/Area_Ataque" to="." method="_on_area_ataque_area_entered"]
 [connection signal="area_entered" from="Boxes_Daño/Area_Herido" to="." method="_on_area_herido_area_entered"]

@@ -30,7 +30,7 @@
 [ext_resource type="PackedScene" uid="uid://ck1kubax5dcwa" path="res://Cosas_Enemigos/Murcielago/murcielago.tscn" id="20_y8y2p"]
 [ext_resource type="PackedScene" uid="uid://c455r35l4kl28" path="res://Cosas_Enemigos/Green-Skeleton/green_skeleton.tscn" id="22_ym57c"]
 [ext_resource type="PackedScene" uid="uid://cjrfj6rpb2wa8" path="res://Cosas_Enemigos/Fantasma_Griton/fantasma_griton.tscn" id="23_1lgid"]
-[ext_resource type="PackedScene" uid="uid://bhnx3d5qh26ch" path="res://Cosas_Personajes/Guerrera/player_guerrera.tscn" id="31_6k2hp"]
+[ext_resource type="PackedScene" uid="uid://bftnxldj37kxg" path="res://Cosas_Personajes/Guerrero/player_guerrero.tscn" id="31_px5v5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tttjq"]
 size = Vector2(2296.5, 106)
@@ -158,5 +158,5 @@ position = Vector2(1592, 288)
 
 [node name="Player" type="Node2D" parent="."]
 
-[node name="Player_Guerrera" parent="Player" instance=ExtResource("31_6k2hp")]
-position = Vector2(1149, 499)
+[node name="Player_Guerrero" parent="Player" instance=ExtResource("31_px5v5")]
+position = Vector2(1128, 432)

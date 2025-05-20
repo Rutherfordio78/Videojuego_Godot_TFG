@@ -1,4 +1,4 @@
-[gd_scene load_steps=99 format=3 uid="uid://bhnx3d5qh26ch"]
+[gd_scene load_steps=100 format=3 uid="uid://bhnx3d5qh26ch"]
 
 [ext_resource type="Texture2D" uid="uid://wqvoe1iygkka" path="res://Assests/Imagenes/Players/guerrera/idle/Warrior_Idle_2.png" id="1_d83ej"]
 [ext_resource type="Texture2D" uid="uid://d0155ev5r2tdj" path="res://Assests/Imagenes/Players/guerrera/idle/Warrior_Idle_1.png" id="1_exql1"]
@@ -81,6 +81,7 @@
 [ext_resource type="PackedScene" uid="uid://cw2y8tq332au0" path="res://Cosas_Menus/Interface_Usuario/contador_monedas.tscn" id="72_3d02f"]
 [ext_resource type="PackedScene" uid="uid://b3vscqa15uxu5" path="res://Cosas_Menus/Interface_Usuario/contador_llaves.tscn" id="73_3gvto"]
 [ext_resource type="AudioStream" uid="uid://ciy6k23xr6hxg" path="res://Assests/Efectos_de_Sonido/Guerrera_Salto.mp3" id="78_opgcv"]
+[ext_resource type="PackedScene" uid="uid://xcri4tbmrqgd" path="res://Cosas_Menus/Menu_Pausar_Juego/menu_pausar_juego.tscn" id="82_thlxq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hldhw"]
 size = Vector2(25, 46)
@@ -1591,25 +1592,25 @@ position = Vector2(0, -40)
 zoom = Vector2(1.3, 1.3)
 
 [node name="Barra_de_Vida" parent="Camera2D3" instance=ExtResource("71_f6io3")]
-z_index = 25
 offset_left = -429.0
 offset_top = -233.0
 offset_right = -235.0
 offset_bottom = -183.0
 
 [node name="Contador_Monedas" parent="Camera2D3" instance=ExtResource("72_3d02f")]
-z_index = 25
 offset_left = 340.0
 offset_top = -229.0
 offset_right = 340.0
 offset_bottom = -229.0
 
 [node name="Contador_Llaves" parent="Camera2D3" instance=ExtResource("73_3gvto")]
-z_index = 25
 offset_left = 252.0
 offset_top = -229.0
 offset_right = 252.0
 offset_bottom = -229.0
+
+[node name="Menu_Pausar_Juego" parent="." instance=ExtResource("82_thlxq")]
+visible = false
 
 [connection signal="area_entered" from="Boxes_Daño/Area_Ataque" to="." method="_on_area_ataque_area_entered"]
 [connection signal="area_entered" from="Boxes_Daño/Area_Herido" to="." method="_on_area_herido_area_entered"]

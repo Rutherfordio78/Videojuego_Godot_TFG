@@ -20,8 +20,10 @@ func _process(delta: float) -> void:
 
 func _on_seleccionar_pressed() -> void:
 	Global.personaje_seleccionado = personajes[indice_actual]
-	get_tree().change_scene_to_file("res://Cosas_Escenario/Zona_Segura/zona_segura.tscn") # cambiar a la escena que toque
-
+	if Global.tutorial == 1:
+		get_tree().change_scene_to_file("res://Cosas_Escenario/Zona_Segura/zona_segura.tscn") # cambiar a la escena que toque
+	elif Global.tutorial == 2:
+		get_tree().change_scene_to_file("res://Cosas_Escenario/Nivel_Tutorial/nivel_tutorial.tscn")
 
 func _on_boton_derecha_pressed() -> void:
 	indice_actual += 1

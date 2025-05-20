@@ -12,11 +12,13 @@ func _process(delta: float) -> void:
 
 
 func _on_start_pressed() -> void:
+	Global.tutorial = 1
 	get_tree().change_scene_to_file("res://Cosas_Menus/Menu_Selector_Personajes/Selector_de_Personaje.tscn")
 
 
 func _on_options_pressed() -> void:
-	pass # Replace with function body.
+	Global.tutorial = 2
+	get_tree().change_scene_to_file("res://Cosas_Menus/Menu_Selector_Personajes/Selector_de_Personaje.tscn")
 
 
 func _on_exit_pressed() -> void:

@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://xcri4tbmrqgd"]
+
+[ext_resource type="Script" path="res://Cosas_Menus/Menu_Pausar_Juego/menu_pausar_juego.gd" id="1_idpko"]
+[ext_resource type="FontFile" uid="uid://dfffu801f73p7" path="res://Assests/Tipos_de_Letra/MedievalSharp-Regular.ttf" id="1_v6eva"]
+[ext_resource type="Script" path="res://Cosas_Menus/Menu_Pausar_Juego/quitar_pausa.gd" id="3_4ydxm"]
+[ext_resource type="Script" path="res://Cosas_Menus/Menu_Pausar_Juego/rendirse.gd" id="4_06k0g"]
+
+[node name="Menu_Pausar_Juego" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_idpko")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = -35.0
+offset_right = 112.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="Quitar Pausa" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_v6eva")
+theme_override_font_sizes/font_size = 30
+text = "Quitar Pausa"
+script = ExtResource("3_4ydxm")
+
+[node name="Rendirse" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_v6eva")
+theme_override_font_sizes/font_size = 30
+text = "Rendirse"
+script = ExtResource("4_06k0g")
+
+[connection signal="pressed" from="VBoxContainer/Quitar Pausa" to="." method="_on_quitar_pausa_pressed"]
+[connection signal="pressed" from="VBoxContainer/Rendirse" to="." method="_on_rendirse_pressed"]

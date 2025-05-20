@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://chscrsqusjdvs"]
+[gd_scene load_steps=28 format=3 uid="uid://chscrsqusjdvs"]
 
 [ext_resource type="Texture2D" uid="uid://chpgvfb4rauga" path="res://Assests/Imagenes/Players/Samurai/IDLE.png" id="1_3unt1"]
 [ext_resource type="Texture2D" uid="uid://bynbjclvbqme4" path="res://Assests/Imagenes/Players/Samurai/HURT.png" id="1_fetx6"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://cw2y8tq332au0" path="res://Cosas_Menus/Interface_Usuario/contador_monedas.tscn" id="12_2hdug"]
 [ext_resource type="PackedScene" uid="uid://b3vscqa15uxu5" path="res://Cosas_Menus/Interface_Usuario/contador_llaves.tscn" id="13_yobjs"]
 [ext_resource type="PackedScene" uid="uid://dg8id5g4j8xun" path="res://Cosas_Menus/Interface_Usuario/contador_municion.tscn" id="14_8t2q7"]
+[ext_resource type="PackedScene" uid="uid://xcri4tbmrqgd" path="res://Cosas_Menus/Menu_Pausar_Juego/menu_pausar_juego.tscn" id="15_7uysx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5qhqm"]
 size = Vector2(20, 48)
@@ -988,6 +989,9 @@ offset_left = 248.0
 offset_top = -280.0
 offset_right = 248.0
 offset_bottom = -280.0
+
+[node name="Menu_Pausar_Juego" parent="." instance=ExtResource("15_7uysx")]
+visible = false
 
 [connection signal="area_entered" from="Boxes_Daño/Hurt_Box" to="." method="_on_hurt_box_area_entered"]
 [connection signal="area_entered" from="Boxes_Daño/Hit_Box" to="." method="_on_hit_box_area_entered"]

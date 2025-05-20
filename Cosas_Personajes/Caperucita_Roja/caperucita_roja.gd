@@ -18,6 +18,7 @@ var direccion_num: int
 @onready var cooldown_timer: Timer = $Cooldown_Timer
 @onready var combo_timer: Timer = $Combo_Timer
 @onready var cooldown_dash: Timer = $Cooldown_DASH
+@onready var menu_pausar_juego: Control = $Menu_Pausar_Juego
 
 
 var flecha_derecha = preload("res://Cosas_Personajes/Caperucita_Roja/flecha_derecha.tscn")
@@ -53,9 +54,16 @@ var estado_actual: Estado = Estado.IDLE
 
 func _ready() -> void:
 	ultimo_suelo = global_position
+	process_mode = Node.PROCESS_MODE_ALWAYS
 
+func _unhandled_input(event):
+	if event.is_action_pressed("ui_cancel"):
+		get_tree().paused = not get_tree().paused
+		menu_pausar_juego.visible = get_tree().paused
 
 func _physics_process(delta: float) -> void:
+	if get_tree().paused:
+		return
 	
 	EstadisticasPlayer.posicion_Player = global_position
 	
