@@ -19,7 +19,7 @@
 <section class="download-section" style="text-align: center; margin: 3rem 0;">
     <h2>¡Descarga el juego!</h2>
     <p>Puedes descargar la última versión de Angel Request aquí:</p>
-    <a href="{{ url_for('static', filename='downloads/AngelRequest_v1.0.zip') }}" class="btn btn-primary" download>Descargar Angel Request</a>
+    <a href="{{ url_for('static', filename='downloads/ANGEL_REQUEST.zip') }}" class="btn btn-primary" download>Descargar Angel Request</a>
 </section>
 
 <section class="features">
@@ -47,7 +47,10 @@
     <h2>Watch the Trailer</h2>
     <div class="video-container">
         <div class="video-placeholder">
-            <p>Trailer Coming Soon</p>
+            <video controls>
+                <source src="{{ url_for('static', filename='videos/Trailer_1.mp4') }}" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
         </div>
     </div>
 </section>

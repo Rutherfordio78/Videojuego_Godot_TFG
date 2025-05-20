@@ -131,21 +131,30 @@
         <div class="video-carousel">
             <div class="video-item active">
                 <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/placeholder1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <video controls>
+                        <source src="{{ url_for('static', filename='videos/Tienda_y_musica.mp4') }}" type="video/mp4">
+                        Tu navegador no soporta el elemento de video.
+                    </video>
                 </div>
-                <h3>Official Trailer</h3>
+                <h3>Safe Zone</h3>
             </div>
             <div class="video-item">
                 <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/placeholder2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <video controls>
+                        <source src="{{ url_for('static', filename='videos/Nivel_Pantano.mp4') }}" type="video/mp4">
+                        Tu navegador no soporta el elemento de video.
+                    </video>
                 </div>
-                <h3>Gameplay Showcase</h3>
+                <h3>Swamp Level</h3>
             </div>
             <div class="video-item">
                 <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/placeholder3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <video controls>
+                        <source src="{{ url_for('static', filename='videos/Nivel_Cementerio.mp4') }}" type="video/mp4">
+                        Tu navegador no soporta el elemento de video.
+                    </video>
                 </div>
-                <h3>Developer Commentary</h3>
+                <h3>Grave Level</h3>
             </div>
         </div>
         <div class="carousel-controls">
