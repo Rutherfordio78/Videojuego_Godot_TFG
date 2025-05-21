@@ -43,14 +43,6 @@ https://drive.google.com/file/d/13SSqcZcPPbf-HJHhCWUz_PX_qDRadM0m/view?usp=drive
 
         Inicia Godot, selecciona la carpeta del proyecto y pulsa ▶️ Play.
 
-3. Ejecutables Precompilados
-
-        Windows: descarga AngelRequest_Windows.zip y ejecuta AngelRequest.exe.
-
-        Linux: descarga AngelRequest_Linux.tar.gz, descomprime y ejecuta AngelRequest.x86_64.
-
-        macOS: descarga AngelRequest_macOS.zip, descomprime y abre AngelRequest.app.
-
 🎮 Controles
 
     Teclado
