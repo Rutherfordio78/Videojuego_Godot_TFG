@@ -2,6 +2,10 @@
 ![Godot Engine 4.3](https://img.shields.io/badge/Engine-Godot%204.3-6DA55F.svg)  
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
+Link de descarga de la version demo 1 del juego:
+
+https://drive.google.com/file/d/13SSqcZcPPbf-HJHhCWUz_PX_qDRadM0m/view?usp=drive_link
+
 # Angel Request
 
 **Angel Request** es un juego **roguelike** de plataformas 2D en el que encarnas a un alma que debe cumplir una última misión para ganarse el acceso al cielo. Tras ser rechazado a las puertas celestiales, recibirás la petición de viajar a una dimensión alternativa y derrotar a un ser maligno que amenaza el orden celestial.
@@ -38,14 +42,6 @@
 2. Abre con Godot 4.3
 
         Inicia Godot, selecciona la carpeta del proyecto y pulsa ▶️ Play.
-
-3. Ejecutables Precompilados
-
-        Windows: descarga AngelRequest_Windows.zip y ejecuta AngelRequest.exe.
-
-        Linux: descarga AngelRequest_Linux.tar.gz, descomprime y ejecuta AngelRequest.x86_64.
-
-        macOS: descarga AngelRequest_macOS.zip, descomprime y abre AngelRequest.app.
 
 🎮 Controles
 
